@@ -34,7 +34,7 @@ const handler = async (event) => {
     }
   );
 
-  const test = await sanityAlgolia.webhookSync(sanityClientInstance, event.body);
+  const test = await sanityAlgolia.webhookSync(sanityClientInstance, event.body || "event.body");
 
   return {
     statusCode: 200,
