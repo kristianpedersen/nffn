@@ -41,7 +41,7 @@ const handler = async (event) => {
   );
 
   return sanityAlgolia
-    .webhookSync(sanity, event.body || "oi")
+    .webhookSync(sanity, "oi")
     .then(() => {
       return {
         statusCode: 200,
