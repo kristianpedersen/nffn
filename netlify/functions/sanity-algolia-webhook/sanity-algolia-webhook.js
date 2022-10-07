@@ -1,5 +1,7 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const algoliasearch = require("algoliasearch");
+const sanityClient = require("@sanity/client");
+const indexer = require("sanity-algolia");
 
 const algolia = algoliasearch(
   'C26QC41PWH',
@@ -17,7 +19,7 @@ const handler = async (event) => {
   try {
     return {
       statusCode: 200,
-      body: JSON.stringify(sanity, null, 2),
+      body: JSON.stringify(event, null, 2),
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
