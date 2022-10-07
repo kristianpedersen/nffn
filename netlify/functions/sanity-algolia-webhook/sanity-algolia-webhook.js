@@ -34,7 +34,7 @@ const handler = async (event) => {
             // excerpt: flattenBlocks(document.excerpt),
           };
         default:
-          throw new Error(`Unknown type: ${document.type}`);
+          throw new Error(`Unknown type: ${document._type}`);
       }
     }
   );
