@@ -15,6 +15,7 @@ const sanity = sanityClient({
 });
 
 const handler = async (event) => {
+  return event.toString();
   // `indexer` contains three functions: `default`, `flattenBlocks` and `indexMapProjection`
   // It seems that we need to access `indexer.default` explicitly when not using JS import syntax
   const sanityAlgolia = indexer.default(
@@ -48,15 +49,6 @@ const handler = async (event) => {
         body: JSON.stringify(event, null, 2),
       }
     });
-
-  try {
-
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: error.toString()
-    }
-  }
 }
 
 module.exports = { handler }
