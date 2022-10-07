@@ -14,41 +14,11 @@ const sanity = sanityClient({
   useCdn: false,
 });
 
-const handler = async (event) => {
-  return event.toString();
-  // `indexer` contains three functions: `default`, `flattenBlocks` and `indexMapProjection`
-  // It seems that we need to access `indexer.default` explicitly when not using JS import syntax
-  const sanityAlgolia = indexer.default(
-    {
-      document: {
-        index: algolia.initIndex('test_index'),
-      },
-    },
-
-    document => {
-      return document.toString();
-      switch (document._type) {
-        // case 'document':
-        //   return {
-        //     title: document.title,
-        //     // path: document.slug.current,
-        //     // publishedAt: document.publishedAt,
-        //     // excerpt: flattenBlocks(document.excerpt),
-        //   };
-        // default:
-        //   throw new Error(`Unknown type: ${document._type}`);
-      }
-    }
-  );
-
-  return sanityAlgolia
-    .webhookSync(sanity, event.body || "oi")
-    .then(() => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(event, null, 2),
-      }
-    });
+const handler = async (event, blabla) => {
+  return { 
+    event,
+    blabla
+  };
 }
 
 module.exports = { handler }
