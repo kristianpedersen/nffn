@@ -19,22 +19,23 @@ const handler = async (event) => {
   // It seems that we need to access `indexer.default` explicitly when not using JS import syntax
   const sanityAlgolia = indexer.default(
     {
-      standardArticle: {
+      document: {
         index: algolia.initIndex('test_index'),
       },
     },
 
     document => {
+      return document.toString();
       switch (document._type) {
-        case 'standardArticle':
-          return {
-            title: document.title,
-            // path: document.slug.current,
-            // publishedAt: document.publishedAt,
-            // excerpt: flattenBlocks(document.excerpt),
-          };
-        default:
-          throw new Error(`Unknown type: ${document._type}`);
+        // case 'document':
+        //   return {
+        //     title: document.title,
+        //     // path: document.slug.current,
+        //     // publishedAt: document.publishedAt,
+        //     // excerpt: flattenBlocks(document.excerpt),
+        //   };
+        // default:
+        //   throw new Error(`Unknown type: ${document._type}`);
       }
     }
   );
