@@ -16,19 +16,16 @@ const sanityClientInstance = sanityClient({
 });
 
 const handler = async (event) => {
-  const algoliaIndex = algolia.initIndex("testsoek");
-
   const sanityAlgolia = indexer.default(
     {
       standardArticle: {
-        index: algoliaIndex,
-        projection: `{title}`
+        index: algolia.initIndex("testsoek"),
       }
     },
 
     document => {
       return {
-        title: document.heading,
+        title: document.title,
         body: document.body,
       };
     }
@@ -38,7 +35,7 @@ const handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: `Alt gikk bra! ${JSON.stringify(algoliaIndex)}`
+    body: `Alt gikk bra! ${JSON.stringify(sanityAlgolia)}`
   };
 }
 
