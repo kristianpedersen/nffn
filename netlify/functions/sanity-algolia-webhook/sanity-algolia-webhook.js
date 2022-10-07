@@ -34,11 +34,11 @@ const handler = async (event) => {
     }
   );
 
-  const test = sanityAlgolia.webhookSync(sanityClientInstance, event.body);
+  const test = await sanityAlgolia.webhookSync(sanityClientInstance, event.body);
 
   return {
     statusCode: 200,
-    body: "Alt gikk bra!"
+    body: `Alt gikk bra! ${JSON.stringify(test.json())}`
   };
 }
 
