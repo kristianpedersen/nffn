@@ -16,13 +16,44 @@ const sanity = sanityClient({
 });
 
 const handler = async (event) => {
-  try {
-    return {
-      statusCode: 200,
-      body: JSON.stringify(event, null, 2),
+  const sanityAlgolia = indexer(
+    {
+      post: {
+        index: algolia.initIndex('posts'),
+      },
+    },
+
+    document => {
+      switch (document._type) {
+        case 'standard-article':
+          return {
+            title: document.title,
+            path: document.slug.current,
+            publishedAt: document.publishedAt,
+            // excerpt: flattenBlocks(document.excerpt),
+          };
+        default:
+          throw new Error(`Unknown type: ${document.type}`);
+      }
     }
+  );
+
+  return sanityAlgolia
+    .webhookSync(sanity, event.body || "oi")
+    .then(() => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(event, null, 2),
+      }
+    });
+
+  try {
+
   } catch (error) {
-    return { statusCode: 500, body: error.toString() }
+    return {
+      statusCode: 500,
+      body: error.toString()
+    }
   }
 }
 
