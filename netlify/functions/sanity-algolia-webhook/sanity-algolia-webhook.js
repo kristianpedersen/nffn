@@ -1,6 +1,6 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const algoliasearch = require("algoliasearch");
-console.log(JSON.stringify(algoliasearch).slice(0, 100));
+console.log(algoliasearch.toString());
 
 const handler = async (event) => {
   console.log("It's webhook time!");
