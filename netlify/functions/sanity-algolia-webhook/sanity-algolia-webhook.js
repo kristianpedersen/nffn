@@ -38,7 +38,7 @@ const handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: `Alt gikk bra! ${JSON.stringify(test.json())}`
+    body: `Alt gikk bra! ${JSON.stringify(test)}`
   };
 }
 
