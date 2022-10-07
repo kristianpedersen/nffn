@@ -25,8 +25,8 @@ const handler = async (event) => {
 
     document => {
       return {
-        title: document.title,
-        body: document.body,
+        title: JSON.stringify(document.title),
+        body: JSON.stringify(document.body),
       };
     }
   );
