@@ -2,9 +2,8 @@
 const algoliasearch = require("algoliasearch");
 
 const handler = async (event) => {
-  console.log("It's webhook time!");
+  console.log({ event })
   try {
-    console.log("Try")
     const subject = event.queryStringParameters.name || 'World'
     return {
       statusCode: 200,
@@ -14,7 +13,6 @@ const handler = async (event) => {
       // isBase64Encoded: true,
     }
   } catch (error) {
-    console.log("Try")
     return { statusCode: 500, body: error.toString() }
   }
 }
