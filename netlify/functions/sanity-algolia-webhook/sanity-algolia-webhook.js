@@ -1,10 +1,10 @@
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 const algoliasearch = require("algoliasearch");
-console.log(algoliasearch.toString());
 
 const handler = async (event) => {
   console.log("It's webhook time!");
   try {
+    console.log("Try")
     const subject = event.queryStringParameters.name || 'World'
     return {
       statusCode: 200,
@@ -14,6 +14,7 @@ const handler = async (event) => {
       // isBase64Encoded: true,
     }
   } catch (error) {
+    console.log("Try")
     return { statusCode: 500, body: error.toString() }
   }
 }
