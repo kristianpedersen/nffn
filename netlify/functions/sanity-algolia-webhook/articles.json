@@ -1,0 +1,2170 @@
+{
+    "ms": 811,
+    "query": "*[_type != \"nyheter\"]",
+    "result": [
+        {
+            "_createdAt": "2022-09-29T13:20:09Z",
+            "_id": "03c5ba53-a6ad-4d8f-b74d-26ea39ec8f8f",
+            "_rev": "Y7ENbAR7LNJao3osdIssvM",
+            "_type": "config",
+            "_updatedAt": "2022-09-29T13:20:09Z",
+            "forPasientenItems": [
+                {
+                    "_key": "6b62e61e9cf0",
+                    "_ref": "453b237f-8240-4860-a25a-d98febccea39",
+                    "_type": "reference"
+                }
+            ],
+            "title": "Venstremenyen"
+        },
+        {
+            "_createdAt": "2022-09-29T12:44:01Z",
+            "_id": "453b237f-8240-4860-a25a-d98febccea39",
+            "_rev": "yzq2fFNq2dBW4wEc2NENdh",
+            "_type": "apningstider",
+            "_updatedAt": "2022-09-29T12:56:39Z",
+            "content1": [
+                {
+                    "_key": "26921f7b053f",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "8944bcdda12c0",
+                            "_type": "span",
+                            "marks": [
+                                "strong"
+                            ],
+                            "text": "Pasienter som skal ta prøve hos Fürst oppfordres så langt det er mulig å benytte bankkort ved betaling."
+                        },
+                        {
+                            "_key": "8944bcdda12c1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "\nAv sikkerhetsmessige og administrative hensyn ønsker vi om mulig å unngå betaling med kontanter.\nPrøvetaking holder stengt på alle offentlige helligdager."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "eb50b18d950d",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "da529b032cc50",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ""
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "145c70250bdd",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "78274883e2030",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Viktig informasjon om Corona"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_key": "64cac5923f57",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "72ea11b221e00",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ""
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "1dbdf0efbf03",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "ae23902ddc3f0",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Fürst følger de til enhver tid gjeldende anbefalinger fra FHI (Folkehelseinstituttet) for å beskytte pasienter og helsepersonell."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "fe2fc1c69141",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "af2a482491e30",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ""
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "f60c0f6ff318",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "7159720ced7a0",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Har du generelle spørsmål om Coronasmitte ring kommunens informasjonstelefon eller FHI sin informasjonstelefon 815 55 015. Er du coronasmittet og syk ring 116 117."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ],
+            "locations": [
+                {
+                    "_key": "72042e1ba7ee",
+                    "_type": "location",
+                    "additionalInformation": "Fra og med 12.april 2021 vil prøvetakingen på Furuset være flyttet til midlertidige lokaler på Haugerudsenteret 1, 3.etg. pga. ombygging på Furuset.",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Bilde av Haugerud prøvetakingsstasjon, adresse Haugerudveien 1, 3. etasje",
+                        "asset": {
+                            "_ref": "image-e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04-1100x734-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "Man-fre 7.30 - 15.00, (kveldsåpent ons 7.30 - 20.00)",
+                    "streetAddress": "Haugerudsenteret 1, 3.etg.",
+                    "title": "Oslo: Haugerud"
+                },
+                {
+                    "_key": "532ba7d43665",
+                    "_type": "location",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Dronningens gate 40, 2.etg",
+                        "asset": {
+                            "_ref": "image-b85ede2e7314b2654e3ff4ef7b7751ab529e2e49-550x412-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "Man-fre 7.30 - 15.00",
+                    "streetAddress": "Dronningens gate 40, 2.etg. ",
+                    "title": "Oslo sentrum"
+                },
+                {
+                    "_key": "6cc9c32ae911",
+                    "_type": "location",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Kirkeveien 64b, 3.etg.",
+                        "asset": {
+                            "_ref": "image-8e9b6c6fc2aed470573b50f968ce8607300eec86-550x413-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "Man-fre 7.30 - 15.00, (kveldsåpent tirs 7.30 - 20.00)",
+                    "streetAddress": "Kirkeveien 64b, 3.etg.",
+                    "title": "Oslo: Majorstuen"
+                },
+                {
+                    "_key": "a0ea31ca6c98",
+                    "_type": "location",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Fürst Sandefjord: Dronningensgt. 3, 3.etg.",
+                        "asset": {
+                            "_ref": "image-6917d954615e7098143ea2fa65353f714755e92e-550x438-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "Man-fre 7.30 - 15.00",
+                    "streetAddress": "Dronningensgt. 3, 3.etg.",
+                    "title": "Sandefjord"
+                },
+                {
+                    "_key": "7ac89171a56a",
+                    "_type": "location",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Fürst Bergen: Strandkaien 16, 1.etg.",
+                        "asset": {
+                            "_ref": "image-e0a1e215508a606a45f9d680679c486d12258850-2194x2926-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "Man-fre 08.00 - 15.00",
+                    "streetAddress": "Strandkaien 16, 1.etg.",
+                    "title": "Bergen - Strandkaien"
+                },
+                {
+                    "_key": "3c343f07ff07",
+                    "_type": "location",
+                    "image": {
+                        "_type": "image",
+                        "alt": "Fürst Bergen: Damsgårdsveien 16. 4.etg.",
+                        "asset": {
+                            "_ref": "image-98a5d6188f9288c39eb10a618e98f690db91c2d2-315x420-jpg",
+                            "_type": "reference"
+                        }
+                    },
+                    "openingHours": "*Etter avtale tlf: 55 29 86 16 ",
+                    "streetAddress": "Damsgårdsveien 16. 4.etg.",
+                    "title": "Bergen - Damsgårdsveien"
+                }
+            ],
+            "menuTitle": "Åpningstider",
+            "slug": {
+                "_type": "slug",
+                "current": "apningstider"
+            },
+            "title": "Åpningstider"
+        },
+        {
+            "_createdAt": "2022-10-10T06:44:45Z",
+            "_id": "919b30b5-1ed8-439d-aa69-f629b4de3575",
+            "_rev": "3x1HZyLtfxbB4jlmdFZaXZ",
+            "_type": "standardArticle",
+            "_updatedAt": "2022-10-10T08:13:46Z",
+            "content": [
+                {
+                    "_key": "8f0d3b731e9a",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "fa47f1163f91",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "test igjen"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ],
+            "menuTitle": "test",
+            "slug": {
+                "_type": "slug",
+                "current": "test"
+            },
+            "title": "test"
+        },
+        {
+            "_createdAt": "2022-10-10T08:06:34Z",
+            "_id": "935a33e9-e3c3-4803-bee9-ee3a0cb8ee4e",
+            "_rev": "RxwWBPyAJjeYWH4CoiNFhA",
+            "_type": "standardArticle",
+            "_updatedAt": "2022-10-10T08:06:59Z",
+            "content": [
+                {
+                    "_key": "9c1fe751ed51",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "4eab41f32310",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Tekst"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "6ce63f0acc43",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "4026cf00f872",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Mer tekst"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ],
+            "menuTitle": "Test-tittel",
+            "slug": {
+                "_type": "slug",
+                "current": "test-vegard"
+            },
+            "title": "Test Vegard"
+        },
+        {
+            "_createdAt": "2022-10-04T10:34:03Z",
+            "_id": "articles-singleton",
+            "_rev": "ugdQkaA2eUQFekJMRyxsUs",
+            "_type": "articles",
+            "_updatedAt": "2022-10-05T06:32:38Z",
+            "forPasientenArticles": [
+                {
+                    "_key": "a0e019cf0340",
+                    "_ref": "f333fc17-aa11-425d-8549-b03c57419396",
+                    "_type": "reference"
+                }
+            ],
+            "title": "Sider i ventremenyen"
+        },
+        {
+            "_createdAt": "2022-10-03T11:59:28Z",
+            "_id": "f333fc17-aa11-425d-8549-b03c57419396",
+            "_rev": "RxwWBPyAJjeYWH4Coi8kSQ",
+            "_type": "standardArticle",
+            "_updatedAt": "2022-10-10T06:54:06Z",
+            "content": [
+                {
+                    "_key": "526b0611461c",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "ec419b21275b0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "På alle våre prøvetakingsstasjoner er det drop-in for ordinær prøvetaking. Det er kun glukosebelastning (042) som krever timebestilling. Noe ventetid må påregnes om morgenen og ved lunsjtider. I sommerperioden, romjulen og i påsken kan enkelte prøvetakingsstasjoner ha endrede åpningstider."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "3942c7ccedde",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "c3567c46fefc0",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Fürst utfører"
+                        },
+                        {
+                            "_key": "c3567c46fefc1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " "
+                        },
+                        {
+                            "_key": "c3567c46fefc2",
+                            "_type": "span",
+                            "marks": [
+                                "em",
+                                "strong"
+                            ],
+                            "text": "ikke"
+                        },
+                        {
+                            "_key": "c3567c46fefc3",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " "
+                        },
+                        {
+                            "_key": "c3567c46fefc4",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "SARS-CoV-2 (PCR) prøvetaking."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "a1cc37d5d78c",
+                    "_type": "inTextImage",
+                    "alt": "En kvinne sitter i en stol, hun har dratt opp genserermet sitt.. En annen kvinne i helseuniform klargjør en sprøyte.",
+                    "asset": {
+                        "_ref": "image-7edd82d91e5d548e09af73593ecd1a2207d8a37a-6500x4333-jpg",
+                        "_type": "reference"
+                    },
+                    "inline": true,
+                    "title": "Prøvetaking"
+                },
+                {
+                    "_key": "ba49ad8eb969",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "77a0d7df98290",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Forberedelser til prøvetaking"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_key": "ea1e269dc08c",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "50717c719f1f0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "I dagene før prøvetaking bør man avstå fra hard fysisk aktivitet. Dersom en ikke har fått beskjed om faste, kan man på prøvetakingsdagen spise en lett frokost. Store og fettrike måltider bør unngås i timene før prøven tas.\nDet er gunstig å møte i god tid slik at en kan sitte avslappet i 15 min. før prøven tas. Barn kan grue seg for selve stikket. På laboratoriet kan man få kjøpt et bedøvende plaster som må settes på 1 time før prøvetaking. Les mer om "
+                        },
+                        {
+                            "_key": "50717c719f1f1",
+                            "_type": "span",
+                            "marks": [
+                                "b60bbdfffd5f"
+                            ],
+                            "text": "blodprøvetaking av barn"
+                        },
+                        {
+                            "_key": "50717c719f1f2",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "b60bbdfffd5f",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/blodprovetaking-av-barn/"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "3ae8d73b735d",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "dbc87648e3b00",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Prøvetaking for videresending til andre laboratorier på Fürst sine prøvetakingsstasjoner i forbindelse med høytider:\nPrøvetaking til enkelte analyser med videreforsendelse til andre laboratorier kan ikke utføres to virkedager før høytider i romjulen, og tirsdag og onsdag i påsken på grunn av holdbarhet."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "572461a94a8a",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "7361ff45ca710",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Ta kontakt med kundestøtte dersom du er i tvil."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "d639011afc91",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "ff46066c56d60",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Som pasient hos oss, kan du benytte en av våre "
+                        },
+                        {
+                            "_key": "ff46066c56d61",
+                            "_type": "span",
+                            "marks": [
+                                "4c8870e25214"
+                            ],
+                            "text": "prøvetakingsstasjoner"
+                        },
+                        {
+                            "_key": "ff46066c56d62",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " i Oslo-området, i Sandefjord eller i Bergen."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "4c8870e25214",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "9429e59f07c3",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "6ce725682b5e0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Av hensyn til andre pasienter og allergikere, ønsker vi at du ikke benytter parfyme eller andre sterke parfymerte produkter når du møter til prøvetaking hos oss."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "79741fa0d3a0",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "5e75a1f63b520",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Timebestilling"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h3"
+                },
+                {
+                    "_key": "e522acee06bb",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "80af8159dc890",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Det er kun hvis du skal ta Glukosebelastning (042) at det kreves timebestilling. "
+                        },
+                        {
+                            "_key": "80af8159dc891",
+                            "_type": "span",
+                            "marks": [
+                                "911a2c0c1066"
+                            ],
+                            "text": "Logg inn her med BankID"
+                        },
+                        {
+                            "_key": "80af8159dc892",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " og bestill time selv eller kontakt Kundestøtte, 22 90 96 66. "
+                        },
+                        {
+                            "_key": "80af8159dc893",
+                            "_type": "span",
+                            "marks": [
+                                "ea3b149f6220"
+                            ],
+                            "text": "Les mer om undersøkelsen"
+                        },
+                        {
+                            "_key": "80af8159dc894",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ". "
+                        },
+                        {
+                            "_key": "80af8159dc895",
+                            "_type": "span",
+                            "marks": [
+                                "8c79ebe44fca"
+                            ],
+                            "text": "Engelsk (pdf)"
+                        },
+                        {
+                            "_key": "80af8159dc896",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ", "
+                        },
+                        {
+                            "_key": "80af8159dc897",
+                            "_type": "span",
+                            "marks": [
+                                "58adace398b9"
+                            ],
+                            "text": "Arabisk (pdf)"
+                        },
+                        {
+                            "_key": "80af8159dc898",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ", "
+                        },
+                        {
+                            "_key": "80af8159dc899",
+                            "_type": "span",
+                            "marks": [
+                                "61d69dc0c4b9"
+                            ],
+                            "text": "Somali (pdf)"
+                        },
+                        {
+                            "_key": "80af8159dc8910",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " og "
+                        },
+                        {
+                            "_key": "80af8159dc8911",
+                            "_type": "span",
+                            "marks": [
+                                "0a182ea780a8"
+                            ],
+                            "text": "Urdu (pdf)"
+                        },
+                        {
+                            "_key": "80af8159dc8912",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "911a2c0c1066",
+                            "_type": "link",
+                            "href": "https://www.helseboka.app/booking/staff/3419222"
+                        },
+                        {
+                            "_key": "ea3b149f6220",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/glukosebelastning.pdf"
+                        },
+                        {
+                            "_key": "8c79ebe44fca",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/glukosebelastning_en.pdf"
+                        },
+                        {
+                            "_key": "58adace398b9",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/glukosebelastning_ar.pdf"
+                        },
+                        {
+                            "_key": "61d69dc0c4b9",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/glukosebelastning_somali.pdf"
+                        },
+                        {
+                            "_key": "0a182ea780a8",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/glukosebelastning_urdu.pdf"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "368edb2bfcda",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "db20567e29880",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Prøvetakingsstasjonene i Bergen og Sandefjord har egne rutiner. Se under henholdsvis "
+                        },
+                        {
+                            "_key": "db20567e29881",
+                            "_type": "span",
+                            "marks": [
+                                "c77beb95c470"
+                            ],
+                            "text": "Sandefjord"
+                        },
+                        {
+                            "_key": "db20567e29882",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " og "
+                        },
+                        {
+                            "_key": "db20567e29883",
+                            "_type": "span",
+                            "marks": [
+                                "34baf321678e"
+                            ],
+                            "text": "Bergen"
+                        },
+                        {
+                            "_key": "db20567e29884",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "c77beb95c470",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/her-finner-du-oss/sandefjord/"
+                        },
+                        {
+                            "_key": "34baf321678e",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/her-finner-du-oss/bergen/"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "55ab2d61fbe7",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "a472b9d3b76e0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Forholdsregler"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h3"
+                },
+                {
+                    "_key": "3e05e3ad133d",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "1bcce263c2090",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Noen prøver krever forholdsregler som faste, medikamentfaste, urinprøver og lignende. Du finner mer informasjon om dette på baksiden av vår røde rekvisisjon."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "3d3c5906a675",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "f8c62eaf1fbc0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Til følgende prøver må pasienten møte "
+                        },
+                        {
+                            "_key": "f8c62eaf1fbc1",
+                            "_type": "span",
+                            "marks": [
+                                "strong"
+                            ],
+                            "text": "fastende:"
+                        },
+                        {
+                            "_key": "f8c62eaf1fbc2",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " Glukose (041), Glukosebelastning (042) og C-peptid (157).\nMed faste menes at man ikke skal spise, drikke, røyke eller bruke snus fra kl. 24.00 (midnatt) før prøvetaking, 1 glass vann kan inntas. Prøve til Triglyserider (054) krever faste i 12 timer."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "ea9ff71cbbba",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "fc277760becd0",
+                            "_type": "span",
+                            "marks": [
+                                "strong"
+                            ],
+                            "text": "Jern (043):"
+                        },
+                        {
+                            "_key": "fc277760becd1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " Ikke ta jernpreparater 1 døgn før prøvetaking. Prøven tas helst før kl. 12.00."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "abae7f26f8c1",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "677583d68ebd0",
+                            "_type": "span",
+                            "marks": [
+                                "strong"
+                            ],
+                            "text": "Medikamentfaste:"
+                        },
+                        {
+                            "_key": "677583d68ebd1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " Hvis legen din har bestilt følgende prøver innebærer det at dagens tablett tas etter prøvetaking: Digitoksin (108), Fenobarbital (097), Fenytoin (098), Karbamazepin (099), Valproat (101), TSH (118) og Fritt T4 (189). Ved prøvetaking til Litium (023) kan nærmere informasjon fås av rekvirerende lege eller hos Fürst. Preparatnavn og dosering noteres i felt for kliniske opplysninger."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "590df7cb0162",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "cfa650c0218b0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Misbruksanalyser:"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h4"
+                },
+                {
+                    "_key": "b52f176feb66",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "18a7719838310",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Prøvegiver må identifisere seg før prøvetaking."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "1e5b9cf97bc5",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "2e96323394820",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Urinprøver:"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h4"
+                },
+                {
+                    "_key": "f355a9138bfe",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "551e52d93c1d0",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Vanlig urinanalyse:"
+                        },
+                        {
+                            "_key": "551e52d93c1d1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " Ta med ca 0,5 dl morgenurin. Les om riktig "
+                        },
+                        {
+                            "_key": "551e52d93c1d2",
+                            "_type": "span",
+                            "marks": [
+                                "f628393a3299"
+                            ],
+                            "text": "urinprøvetaking"
+                        },
+                        {
+                            "_key": "551e52d93c1d3",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "f628393a3299",
+                            "_type": "link",
+                            "href": "https://www.furst.no/globalassets/pdf/urinprovetaking.pdf"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "761d2be234cb",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "c9e5eb65caac0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Penselprøver:"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h4"
+                },
+                {
+                    "_key": "b363077c1767",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "844d79f8d67c0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Tas på legekontoret (ikke hos Fürst)."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "df73fb7f6aa5",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "2e6aa127b6ad0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Avføringsprøver:"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h4"
+                },
+                {
+                    "_key": "3bf72161cd63",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "54dfe85341d60",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Blod i feces"
+                        },
+                        {
+                            "_key": "54dfe85341d61",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " (075): Ta med avføringsprøve. Spesialkonvolutt fås på legekontoret; les bruksanvisningen."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "835faf7b76ba",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "1c47c4e45c0a0",
+                            "_type": "span",
+                            "marks": [
+                                "em"
+                            ],
+                            "text": "Kalprotektin"
+                        },
+                        {
+                            "_key": "1c47c4e45c0a1",
+                            "_type": "span",
+                            "marks": [],
+                            "text": " (484): Ta med avføringsprøve. Beholder til dette kan fås på legekontoret."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "ae5394b19c44",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "b60bba50eb740",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Under prøvetaking"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h3"
+                },
+                {
+                    "_key": "a6847b9bd13b",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "4c42fce651af0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Å ta prøver medfører vanligvis lite ubehag. Hvis du møter opp på prøvetakingsstasjonen en time før prøven skal tas, kan du få kjøpt en bedøvende krem som påføres stikkstedet."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "c89c87b7bcc6",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "aa3992b08af50",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Etter prøvetaking"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h3"
+                },
+                {
+                    "_key": "b7be56cd036c",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "93b6e5e936bb0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Etter prøvetaking kan du spise og drikke dersom du har vært fastende, og ta tablettene du normalt ville ha tatt."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_key": "1a908b25a5b0",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "bf082b1263d90",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Svar på prøven - "
+                        },
+                        {
+                            "_key": "bf082b1263d91",
+                            "_type": "span",
+                            "marks": [
+                                "d5d2b46c083a"
+                            ],
+                            "text": "furstpasient.no"
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "d5d2b46c083a",
+                            "_type": "link",
+                            "href": "http://www.furstpasient.no/"
+                        }
+                    ],
+                    "style": "h3"
+                },
+                {
+                    "_key": "4e1edf110346",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "5f699fdeca7f0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Vi sender analysesvaret til din lege som vil informere deg om resultatet. Legen kan gi deg mer relevant informasjon enn oss, fordi han kjenner din medisinske historie og tilstand. Et laboratoriesvar må alltid ses i sammenheng med din øvrige tilstand og behandling. Du kan også selv logge deg inn for å se dine prøvesvar hos Fürst, "
+                        },
+                        {
+                            "_key": "5f699fdeca7f1",
+                            "_type": "span",
+                            "marks": [
+                                "919dc7b285f5"
+                            ],
+                            "text": "les mer"
+                        },
+                        {
+                            "_key": "5f699fdeca7f2",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "919dc7b285f5",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/pasientweb/"
+                        }
+                    ],
+                    "style": "normal"
+                },
+                {
+                    "_key": "b6483ea9a727",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "3deb7ff1f4090",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Betaling"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h3"
+                },
+                {
+                    "_key": "e7416d7d9ab5",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "5b02f656a7f00",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Det koster kr. 59,- å ta prøver som skal analyseres av Fürst. Beløpet regnes som egenandel og blir registrert hos Helfo. Pasienter med "
+                        },
+                        {
+                            "_key": "5b02f656a7f01",
+                            "_type": "span",
+                            "marks": [
+                                "b0783b835a8a"
+                            ],
+                            "text": "frikort"
+                        },
+                        {
+                            "_key": "5b02f656a7f02",
+                            "_type": "span",
+                            "marks": [],
+                            "text": ", gravide og barn under 16 år skal ikke betale. Prøver som skal videresendes til andre laboratorier koster kr. 250,-, videresending til utlandet belastes med kr. 350,-. Egne takster for farskapssaker og familiegjenforening.\n"
+                        },
+                        {
+                            "_key": "5b02f656a7f03",
+                            "_type": "span",
+                            "marks": [
+                                "strong",
+                                "strong"
+                            ],
+                            "text": "Pasienter som skal ta prøve hos Fürst oppfordres så langt det er mulig å benytte bankkort ved betaling."
+                        },
+                        {
+                            "_key": "5b02f656a7f04",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "\nAv sikkerhetsmessige og administrative hensyn ønsker vi om mulig å unngå betaling med kontanter."
+                        }
+                    ],
+                    "markDefs": [
+                        {
+                            "_key": "b0783b835a8a",
+                            "_type": "link",
+                            "href": "https://www.furst.no/ta-prove-hos-oss/frikort/"
+                        }
+                    ],
+                    "style": "normal"
+                }
+            ],
+            "menuTitle": "Pasient hos Fürst",
+            "slug": {
+                "_type": "slug",
+                "current": "pasient-hos-fuerst"
+            },
+            "title": "Pasient hos Fürst"
+        },
+        {
+            "_createdAt": "2022-10-04T07:24:18Z",
+            "_id": "f9ac325c-4910-427b-ac10-119da52b7855",
+            "_rev": "7YFibvF3xjZ4JMfEQCfTpn",
+            "_type": "pages",
+            "_updatedAt": "2022-10-04T07:32:48Z"
+        },
+        {
+            "_createdAt": "2022-09-29T10:57:09Z",
+            "_id": "image-20e8ec679e4b99905eabec5e6a131a9c798a5433-615x149-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIV6Sn",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T10:57:09Z",
+            "assetId": "20e8ec679e4b99905eabec5e6a131a9c798a5433",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "DVSPOdtUtWjCbd-:j]j^j?fR",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 4.12751677852349,
+                    "height": 149,
+                    "width": 615
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAFABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQI/8QAHRAAAwEAAQUAAAAAAAAAAAAAAAECAwQRJDFRkf/EABUBAQEAAAAAAAAAAAAAAAAAAAIE/8QAGhEAAwADAQAAAAAAAAAAAAAAAAECBBEhMf/aAAwDAQACEQMRAD8A09cXWVJa1L9pEVcXdy+81+AEuRCp9HL0X4xazlPSm+nkAFK8Af/Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#8c7d45",
+                        "foreground": "#fff",
+                        "population": 2.07,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#746a0f",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#f2e384",
+                        "foreground": "#000",
+                        "population": 5.55,
+                        "title": "#000"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#ccc2a2",
+                        "foreground": "#000",
+                        "population": 0.03,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#f2e384",
+                        "foreground": "#000",
+                        "population": 5.55,
+                        "title": "#000"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a49472",
+                        "foreground": "#fff",
+                        "population": 0.38,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#ebdd69",
+                        "foreground": "#000",
+                        "population": 0.42,
+                        "title": "#000"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "aptima_urin.jpg",
+            "path": "images/sukats6f/test/20e8ec679e4b99905eabec5e6a131a9c798a5433-615x149.jpg",
+            "sha1hash": "20e8ec679e4b99905eabec5e6a131a9c798a5433",
+            "size": 12432,
+            "uploadId": "wf0NJMFqvccr7QgX8cKBcM3XmGpvcVkA",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/20e8ec679e4b99905eabec5e6a131a9c798a5433-615x149.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T10:53:47Z",
+            "_id": "image-20ea15bdc2e3d0b8a1499b4ca52c7432a410b36b-480x320-jpg",
+            "_rev": "jeCn5B0knfvqbwMG8q8LKN",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T10:53:47Z",
+            "assetId": "20ea15bdc2e3d0b8a1499b4ca52c7432a410b36b",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "V9SFqw8wmnm.x]4W4pM}M|agP;LLKiOYV[_2xut6oebH",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.5,
+                    "height": 320,
+                    "width": 480
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAQUAAAAAAAAAAAAAAAAAAAEDBAYH/8QAIRAAAgIBAwUBAAAAAAAAAAAAAQIAAxEEBSETIiQxYUH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABgRAQEBAQEAAAAAAAAAAAAAAAIAAREh/9oADAMBAAIRAxEAPwDbdhS+rft1e3X6q1HfCoy8Jz+SzUgiweTefhEn9FRYWGAT8itWSeGIjqS92o0VvTnJxB2+yYQVSBjJMIU7/9k=",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#655550",
+                        "foreground": "#fff",
+                        "population": 0.01,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#800410",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#674997",
+                        "foreground": "#fff",
+                        "population": 1.81,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#cebfba",
+                        "foreground": "#000",
+                        "population": 0.62,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#f77987",
+                        "foreground": "#000",
+                        "population": 1.73,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#674997",
+                        "foreground": "#fff",
+                        "population": 1.81,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#fa6574",
+                        "foreground": "#fff",
+                        "population": 0.15,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "09b704db027b4b98bf48bd11d4fd97d3.jpg",
+            "path": "images/sukats6f/test/20ea15bdc2e3d0b8a1499b4ca52c7432a410b36b-480x320.jpg",
+            "sha1hash": "20ea15bdc2e3d0b8a1499b4ca52c7432a410b36b",
+            "size": 20321,
+            "uploadId": "xtEVewC4SJHoymauToAVT6EpqBzOF0Pj",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/20ea15bdc2e3d0b8a1499b4ca52c7432a410b36b-480x320.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:48:58Z",
+            "_id": "image-6917d954615e7098143ea2fa65353f714755e92e-550x438-jpg",
+            "_rev": "jeCn5B0knfvqbwMG8qVqRV",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:48:58Z",
+            "assetId": "6917d954615e7098143ea2fa65353f714755e92e",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "VJEfQf4-%NtlSN~qx]%MX9x]_3xaxuxuozxZxus,s.kD",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.2557077625570776,
+                    "height": 438,
+                    "width": 550
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABwAEBf/EACMQAAEEAgEDBQAAAAAAAAAAAAECAwQFABESBgchExUxQVH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgT/xAAaEQEAAwEBAQAAAAAAAAAAAAABAAIRAxIh/9oADAMBAAIRAxEAPwDn2fcB28vlzY0hTbbiNFrWwnWbK24fkXEVbzjLpSCEg+CkfuC1R7hDrIzkHkv1CeQ48tYgdMQJNpKUuXJdYW1w0UN+Rv5x++tIGADF1FlseScsLOpI18zauIrJkpyOANEI+8s0V5WsbKeoT//Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#363d50",
+                        "foreground": "#fff",
+                        "population": 2.2,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#611e19",
+                        "foreground": "#fff",
+                        "population": 0.05,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a0b8c3",
+                        "foreground": "#000",
+                        "population": 3.34,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a0b8c3",
+                        "foreground": "#000",
+                        "population": 3.34,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#e9d6ba",
+                        "foreground": "#000",
+                        "population": 0.52,
+                        "title": "#000"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b45c6c",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#caa451",
+                        "foreground": "#000",
+                        "population": 0.11,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "sandefjord.jpg",
+            "path": "images/sukats6f/test/6917d954615e7098143ea2fa65353f714755e92e-550x438.jpg",
+            "sha1hash": "6917d954615e7098143ea2fa65353f714755e92e",
+            "size": 42083,
+            "uploadId": "Uiz1nn49it9OpR3tnCNK6ueqBQEq2eQd",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/6917d954615e7098143ea2fa65353f714755e92e-550x438.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T10:39:37Z",
+            "_id": "image-7af21b170035829923236e8427055b0093f242e0-100x136-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIRTrP",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T10:39:37Z",
+            "assetId": "7af21b170035829923236e8427055b0093f242e0",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "dGQA8T-V?v%fI[n$oft6~UE2nNxa-=9ai^%2I[D+jYxt",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 0.7352941176470589,
+                    "height": 136,
+                    "width": 100
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGwAAAQQDAAAAAAAAAAAAAAAAAAEDBAUGBwj/xAAnEAACAQMCBgEFAAAAAAAAAAABAgMABAUREgYUITFRYUEjM1OCkf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAv/EABwRAAICAgMAAAAAAAAAAAAAAAABAhESEyIxUf/aAAwDAQACEQMRAD8A6GyHC8N3dPO11OhZtxCtT+PRcTA0SuG66lnfqars3DdXkshS+a23psCr8e6xQ8F3DiTdxBdMXGnftTcmqYVQSyXZsmPKW5X6kihvANFUOPxXL2UMRcylFC7z3b3RWtcDGyfhOyaxrd6Ou7p5pgSRKPtEftV/JbxPNueNWbyaXlYPxJ/KDJj0R7ONWt0K9j71oqaqqqgKAAPgUVZMqR//2Q==",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#476469",
+                        "foreground": "#fff",
+                        "population": 3.9,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5b2842",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b3b9be",
+                        "foreground": "#000",
+                        "population": 5.01,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b3b9be",
+                        "foreground": "#000",
+                        "population": 5.01,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b5e8f5",
+                        "foreground": "#000",
+                        "population": 0.21,
+                        "title": "#000"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#838366",
+                        "foreground": "#fff",
+                        "population": 0.15,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a44976",
+                        "foreground": "#fff",
+                        "population": 1.43,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "6e8c1fc4a67447a39330cac0c8927855.jpg",
+            "path": "images/sukats6f/test/7af21b170035829923236e8427055b0093f242e0-100x136.jpg",
+            "sha1hash": "7af21b170035829923236e8427055b0093f242e0",
+            "size": 3032,
+            "uploadId": "Oe8XdH2YOdf07uGX0mtZisupVvOXLI8t",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/7af21b170035829923236e8427055b0093f242e0-100x136.jpg"
+        },
+        {
+            "_createdAt": "2022-10-10T06:43:41Z",
+            "_id": "image-7edd82d91e5d548e09af73593ecd1a2207d8a37a-6500x4333-jpg",
+            "_rev": "C4hHg4TGris45vaSrrNkyw",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-10-10T06:43:41Z",
+            "assetId": "7edd82d91e5d548e09af73593ecd1a2207d8a37a",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "VWL4W-xutRof?b_NR*WXofWWNGWCslofMxxbt7SOM{V@",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.500115393491807,
+                    "height": 4333,
+                    "width": 6500
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAcFBv/EACQQAAEEAgEEAgMAAAAAAAAAAAIBAwQFAAYxERIhUQcTYZGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAbEQACAgMBAAAAAAAAAAAAAAABAgARAyExIv/aAAwDAQACEQMRAD8Ao+wWcwJIwadgDeEhV0z4EF/uNttm6WhWaUhtpBIUMuefSZw1tsEpvaB+lBBHI3cqc+UzCsicuNau3JLhd0UeoIvlP1hW39Dkq1Jo9lurJEefAYlRzQ2nQQhL3jJh8c7A63p1cBMiSiHTqpfnGBsyAkXGuFyAZ//Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3b495d",
+                        "foreground": "#fff",
+                        "population": 3.73,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5c3b28",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3b495d",
+                        "foreground": "#fff",
+                        "population": 3.73,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#ceb09f",
+                        "foreground": "#000",
+                        "population": 2.24,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#efd2ca",
+                        "foreground": "#000",
+                        "population": 0.66,
+                        "title": "#000"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5ca88c",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#c99c82",
+                        "foreground": "#000",
+                        "population": 2.64,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "pasient-hos-furst.jpg",
+            "path": "images/sukats6f/test/7edd82d91e5d548e09af73593ecd1a2207d8a37a-6500x4333.jpg",
+            "sha1hash": "7edd82d91e5d548e09af73593ecd1a2207d8a37a",
+            "size": 5432498,
+            "uploadId": "1IbII4yp6NFSgtuY1Uo5g5MPMZQ1Ye0I",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/7edd82d91e5d548e09af73593ecd1a2207d8a37a-6500x4333.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:47:42Z",
+            "_id": "image-8e9b6c6fc2aed470573b50f968ce8607300eec86-550x413-jpg",
+            "_rev": "yzq2fFNq2dBW4wEc2NAVJR",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:47:42Z",
+            "assetId": "8e9b6c6fc2aed470573b50f968ce8607300eec86",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "VWF?9IItxvRjRk%%kYbcjFWBKSxvR+ocWWOuofjZaefl",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.3317191283292977,
+                    "height": 413,
+                    "width": 550
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACEQAAIBBAICAwAAAAAAAAAAAAECAwAEBRESIRMUIlGh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABkRAAMAAwAAAAAAAAAAAAAAAAACAxMyUv/aAAwDAQACEQMRAD8AqQ5/KvbKBHawEjst8vykVmeW/t/fyE0oaQDgh4rWaSxyhXckoZlboBtAr9U1Bb3nlhk9e3DK+9MxNJ72fZgLKaaqbfIYjLyXHKxzBWAgcQw7FFR7vIZB5QUlSHoAog63RRzV6Filyf/Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#374650",
+                        "foreground": "#fff",
+                        "population": 0.67,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#315874",
+                        "foreground": "#fff",
+                        "population": 0.13,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b5a693",
+                        "foreground": "#000",
+                        "population": 11.4,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b5a693",
+                        "foreground": "#000",
+                        "population": 11.4,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#8ab9ec",
+                        "foreground": "#000",
+                        "population": 11.24,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b49970",
+                        "foreground": "#000",
+                        "population": 0.04,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3c94dc",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "majorstuen.jpg",
+            "path": "images/sukats6f/test/8e9b6c6fc2aed470573b50f968ce8607300eec86-550x413.jpg",
+            "sha1hash": "8e9b6c6fc2aed470573b50f968ce8607300eec86",
+            "size": 38136,
+            "uploadId": "nRivZGWVYbz6fiBEoj1W2fBW3VRCmt1n",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/8e9b6c6fc2aed470573b50f968ce8607300eec86-550x413.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:55:50Z",
+            "_id": "image-98a5d6188f9288c39eb10a618e98f690db91c2d2-315x420-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIpyne",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:55:50Z",
+            "assetId": "98a5d6188f9288c39eb10a618e98f690db91c2d2",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "dkCG[hV?tRR+yGadogWENNayRjogNKtRRjofV@kDaeoJ",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 0.75,
+                    "height": 420,
+                    "width": 315
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGwAAAQQDAAAAAAAAAAAAAAAAAAEEBQcCAwb/xAAqEAACAQMCBQEJAAAAAAAAAAABAgMABBEFEgYTFCExYQcVIiNBUVJxgf/EABgBAAIDAAAAAAAAAAAAAAAAAAIFAQME/8QAHxEAAgIBBAMAAAAAAAAAAAAAAAECEQMEBRIUFVFh/9oADAMBAAIRAxEAPwBHt52R5LNFkWPuWLYDfr71lATeyDm7lmxgq4waiZr/AE33NH1Ml3dsIxgQKQsZphaa7HGFCXrsqkEJcIcj+01juU1K5K0YJaSLVJlgQ6BdPGGSByD6UVJQe19raFIYdPt2RFCgk+e1FF5X1EDp/SlY+NJls5LFWgtiQEOI8+PWtc9zKLCS56+FlDAH5Y+tVm5PTxPk72Jyc+a7vhWCOSxHMQMPPelLpDGiYhZZ4xJ1UI3D8TRTLUhy7nbH8K7R2FFQsHJWXLA2rP/Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3a424e",
+                        "foreground": "#fff",
+                        "population": 3.85,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#0f1760",
+                        "foreground": "#fff",
+                        "population": 0.05,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5480c7",
+                        "foreground": "#fff",
+                        "population": 7.58,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#8fa7ce",
+                        "foreground": "#000",
+                        "population": 0.8,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#73a6ec",
+                        "foreground": "#000",
+                        "population": 0.55,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5c84ac",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5480c7",
+                        "foreground": "#fff",
+                        "population": 7.58,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "bergen.jpg",
+            "path": "images/sukats6f/test/98a5d6188f9288c39eb10a618e98f690db91c2d2-315x420.jpg",
+            "sha1hash": "98a5d6188f9288c39eb10a618e98f690db91c2d2",
+            "size": 18053,
+            "uploadId": "mkbJvl4weyki3ALyOs3Wuvx0zPFGWvkr",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/98a5d6188f9288c39eb10a618e98f690db91c2d2-315x420.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T10:37:04Z",
+            "_id": "image-9dacac0a00c68e7f3e7f0adc543d7f42c13637b6-200x283-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIRFFR",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T10:37:04Z",
+            "assetId": "9dacac0a00c68e7f3e7f0adc543d7f42c13637b6",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "d9R:4--;D*-p~qtRMxof00Rkj]V[^,t7RioK0JWBafWV",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 0.7067137809187279,
+                    "height": 283,
+                    "width": 200
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBAUGCP/EACQQAAICAgEDBAMAAAAAAAAAAAECAAMEERITITEFIkFSJDNh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwDpHG9PxkBK0KOR2e/mOPjUOtgZQgPbYkmtF4KeI8RZRT8CZSlp9Px8VOmlzsPPubZhLC3HR7GJhMqna7TwHsPaHVbf621MIbLhYwGTfrf3i+rfofk3eftDdTWzdLHdmC6G4TPYVlppO7rD3+W/kIiv/9k=",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#57585b",
+                        "foreground": "#fff",
+                        "population": 0.15,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#7b084d",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#818182",
+                        "foreground": "#fff",
+                        "population": 2.13,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#d4b2bf",
+                        "foreground": "#000",
+                        "population": 0.43,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#fcd4ec",
+                        "foreground": "#000",
+                        "population": 0,
+                        "title": "#000"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#818182",
+                        "foreground": "#fff",
+                        "population": 2.13,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#ee1095",
+                        "foreground": "#fff",
+                        "population": 0,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "2c583864e4534138b7c7f2d8d6d0d83f.jpg",
+            "path": "images/sukats6f/test/9dacac0a00c68e7f3e7f0adc543d7f42c13637b6-200x283.jpg",
+            "sha1hash": "9dacac0a00c68e7f3e7f0adc543d7f42c13637b6",
+            "size": 7996,
+            "uploadId": "ZweY8rb6Vw3CPuxiqrge3dVHPq2CqNat",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/9dacac0a00c68e7f3e7f0adc543d7f42c13637b6-200x283.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:46:47Z",
+            "_id": "image-b85ede2e7314b2654e3ff4ef7b7751ab529e2e49-550x412-jpg",
+            "_rev": "yzq2fFNq2dBW4wEc2N8Cvx",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:46:47Z",
+            "assetId": "b85ede2e7314b2654e3ff4ef7b7751ab529e2e49",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "VREDC;WAJEofkYThofXAj[bJ9Ja#oIWCnztTa#oHayad",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.3349514563106797,
+                    "height": 412,
+                    "width": 550
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/EACEQAAEEAQQDAQAAAAAAAAAAAAECAwQRAAUSEzEGFCFB/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABsRAAICAwEAAAAAAAAAAAAAAAECABEDBCEF/9oADAMBAAIRAxEAPwBUlpbU1TLbAUEGio9Y92I7sQpLLJJ7AzNR/JJLzyw21yAqoqJAvKKtckoQAqOCa+UvFPt5We7MOmugWqliNC5m93CAQaIr9wyfp2uTPXJNN2onb3hjl9KgAw7CNokmweT/2Q==",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3a3d40",
+                        "foreground": "#fff",
+                        "population": 7.92,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#20384e",
+                        "foreground": "#fff",
+                        "population": 0.79,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5186c8",
+                        "foreground": "#fff",
+                        "population": 9.08,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b9c0c1",
+                        "foreground": "#000",
+                        "population": 1.1,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#98bfe4",
+                        "foreground": "#000",
+                        "population": 1.75,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#727983",
+                        "foreground": "#fff",
+                        "population": 7.63,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5186c8",
+                        "foreground": "#fff",
+                        "population": 9.08,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "oslo-sentrum.jpg",
+            "path": "images/sukats6f/test/b85ede2e7314b2654e3ff4ef7b7751ab529e2e49-550x412.jpg",
+            "sha1hash": "b85ede2e7314b2654e3ff4ef7b7751ab529e2e49",
+            "size": 39013,
+            "uploadId": "E2NzWwJFrL1siZLoANPiVxJebLdVJfGR",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/b85ede2e7314b2654e3ff4ef7b7751ab529e2e49-550x412.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T10:56:56Z",
+            "_id": "image-bb1fd323414f11c8b6290466328bc03e0d2aa372-100x142-jpg",
+            "_rev": "jeCn5B0knfvqbwMG8q8kWt",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T10:56:56Z",
+            "assetId": "bb1fd323414f11c8b6290466328bc03e0d2aa372",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "dbQ]ZzI@tRsTHrNeWXV@.9s,aej[.ma0aKozO@RPRibb",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 0.704225352112676,
+                    "height": 142,
+                    "width": 100
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgYH/8QAJBAAAgICAQMEAwAAAAAAAAAAAQIDBAARBRIhMQYHE2FBUZH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAgQD/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAECAwQRIyH/2gAMAwEAAhEDEQA/AO3VeSuwQOtm5IJF2xITfbF1/cjiFkENiSZXUdy6a3mbq8va5EMbtC1CWGtqpBGUh9Nnl3j+ej1zRnSudpsfeY5DuS5ouxFiN92zqPCc5V5agtquW+NiQNj9YZl4eA9SQRLFTtVa8CjSxqPGGJGyzS3H0Syupybg9I19xQJFCgDt+MtE7dPbyPoY+aFJCC29/RyFrxht6P8AcpJBqb6RvzhkgaAAwwA//9k=",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#51627c",
+                        "foreground": "#fff",
+                        "population": 1.44,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#cd1c0c",
+                        "foreground": "#fff",
+                        "population": 0.04,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a08582",
+                        "foreground": "#fff",
+                        "population": 3.33,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#b1bdcb",
+                        "foreground": "#000",
+                        "population": 2.65,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#f6ae7e",
+                        "foreground": "#000",
+                        "population": 0.46,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a08582",
+                        "foreground": "#fff",
+                        "population": 3.33,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#e2432b",
+                        "foreground": "#fff",
+                        "population": 3.31,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "7f1536a2864f46b1a394f7620a7134c0.jpg",
+            "path": "images/sukats6f/test/bb1fd323414f11c8b6290466328bc03e0d2aa372-100x142.jpg",
+            "sha1hash": "bb1fd323414f11c8b6290466328bc03e0d2aa372",
+            "size": 14428,
+            "uploadId": "CaeP6NPIhB7Q4iiGpYPHPU7nMEqyOdSZ",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/bb1fd323414f11c8b6290466328bc03e0d2aa372-100x142.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:54:50Z",
+            "_id": "image-e0a1e215508a606a45f9d680679c486d12258850-2194x2926-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIprxO",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:54:50Z",
+            "assetId": "e0a1e215508a606a45f9d680679c486d12258850",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "dZI5lLRPWYt5~qoet8oJIAa}ofofoyRkjYj?xuRjt7f6",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 0.7498291182501708,
+                    "height": 2926,
+                    "width": 2194
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAMFBgQHCP/EACYQAAICAgEEAAcBAAAAAAAAAAIDAQQAEQUSITFBBgcUMlFhcqH/xAAXAQEBAQEAAAAAAAAAAAAAAAACAwEE/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAECERIhUTH/2gAMAwEAAhEDEQA/ALTyqoDmb7bFZlV41x1eVGxnx6xlRvJ8XbO9w0pYw9dc+RbGvMx6xK+RQdqxYU+yhT1QAJaGw3H+ZJ02IJsHEKmZ1s1F077e4xuvGYpUOscgfLHFu3VEHmMQUDvW4wyRqnVhA9Xaf3GGdCcVqiOT6c/U/jq8mxSF6oCuZxo4nsO/eXS7zylcC60D1MYM9Ir1Gy3O97zVygFq1JYMEsftGfWWGlXUS+kgiR/E5Cm9WKWPtEtW+YVoKyt/TxJRvU77d/GGYo1URGoSvX84Y8X0KceH/9k=",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3c434a",
+                        "foreground": "#fff",
+                        "population": 6.63,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#1a2836",
+                        "foreground": "#fff",
+                        "population": 0.94,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#3c434a",
+                        "foreground": "#fff",
+                        "population": 6.63,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a7c5d3",
+                        "foreground": "#000",
+                        "population": 4.41,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#d3ba94",
+                        "foreground": "#000",
+                        "population": 0.47,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#9b7c60",
+                        "foreground": "#fff",
+                        "population": 0.16,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#d7a465",
+                        "foreground": "#000",
+                        "population": 0.04,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "bergen8.jpg",
+            "path": "images/sukats6f/test/e0a1e215508a606a45f9d680679c486d12258850-2194x2926.jpg",
+            "sha1hash": "e0a1e215508a606a45f9d680679c486d12258850",
+            "size": 1542234,
+            "uploadId": "NT5pTZUih12ks0iLHz9LqpbKVBrrGNIW",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/e0a1e215508a606a45f9d680679c486d12258850-2194x2926.jpg"
+        },
+        {
+            "_createdAt": "2022-09-29T12:39:39Z",
+            "_id": "image-e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04-1100x734-jpg",
+            "_rev": "Y7ENbAR7LNJao3osdIletV",
+            "_type": "sanity.imageAsset",
+            "_updatedAt": "2022-09-29T12:39:39Z",
+            "assetId": "e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04",
+            "extension": "jpg",
+            "metadata": {
+                "_type": "sanity.imageMetadata",
+                "blurHash": "VsGJK$W[xuRixu.At9WXadWCM{RkkDWAWXV@adoIfkoe",
+                "dimensions": {
+                    "_type": "sanity.imageDimensions",
+                    "aspectRatio": 1.4986376021798364,
+                    "height": 734,
+                    "width": 1100
+                },
+                "hasAlpha": false,
+                "isOpaque": true,
+                "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAhEAABBAICAgMAAAAAAAAAAAACAQMEBQARBiESMQdBwf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGxEBAAMAAwEAAAAAAAAAAAAAAQACAwQTISL/2gAMAwEAAhEDEQA/AGS7Lr2JRMG8nkPvWZ6wJgZUl8HdtF377TEnPv7RPB4phk4S7VVybXWU+ZSWUt6WaqCdDr9y3XlhU7JHXJX5j+45yGDCqGWjR417XyEdouGV/wATylf4LXG6AEWlTapv7wwHe4+RzGiez//Z",
+                "palette": {
+                    "_type": "sanity.imagePalette",
+                    "darkMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#314648",
+                        "foreground": "#fff",
+                        "population": 3.33,
+                        "title": "#fff"
+                    },
+                    "darkVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#2d4461",
+                        "foreground": "#fff",
+                        "population": 2.85,
+                        "title": "#fff"
+                    },
+                    "dominant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5a7998",
+                        "foreground": "#fff",
+                        "population": 5.83,
+                        "title": "#fff"
+                    },
+                    "lightMuted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a1b5c7",
+                        "foreground": "#000",
+                        "population": 4.07,
+                        "title": "#fff"
+                    },
+                    "lightVibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#a8c3fc",
+                        "foreground": "#000",
+                        "population": 2.3,
+                        "title": "#fff"
+                    },
+                    "muted": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#5a7998",
+                        "foreground": "#fff",
+                        "population": 5.83,
+                        "title": "#fff"
+                    },
+                    "vibrant": {
+                        "_type": "sanity.imagePaletteSwatch",
+                        "background": "#306a9c",
+                        "foreground": "#fff",
+                        "population": 0.01,
+                        "title": "#fff"
+                    }
+                }
+            },
+            "mimeType": "image/jpeg",
+            "originalFilename": "haugerud_senter_medium.jpg",
+            "path": "images/sukats6f/test/e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04-1100x734.jpg",
+            "sha1hash": "e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04",
+            "size": 781723,
+            "uploadId": "bbpUE1v5gjdozlYFqNwq5Sq1J6ucfpvD",
+            "url": "https://cdn.sanity.io/images/sukats6f/test/e5d1a7adb0b779d4cb48b181190cb15d6b3f7a04-1100x734.jpg"
+        },
+        {
+            "_createdAt": "2022-10-04T08:51:42Z",
+            "_id": "sideinnstillinger",
+            "_rev": "he9zE6a6Dn3PrTdI3MRz14",
+            "_type": "site-settings",
+            "_updatedAt": "2022-10-04T08:51:42Z",
+            "description": "Global beskrivelse, kanskje?",
+            "title": "Global tittel, kanskje?"
+        }
+    ]
+}
