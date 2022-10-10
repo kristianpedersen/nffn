@@ -20,6 +20,12 @@ const handler = async (event) => {
     {
       standardArticle: {
         index: algolia.initIndex("test_index"),
+        projection: `{
+          title,
+          "path": slug.current,
+          "body": pt::text(body)
+        }
+        `
       }
     },
 
