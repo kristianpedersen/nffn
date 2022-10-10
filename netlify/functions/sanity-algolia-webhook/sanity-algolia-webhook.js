@@ -19,7 +19,7 @@ const handler = async (event) => {
   const sanityAlgolia = indexer.default(
     {
       standardArticle: {
-        index: algolia.initIndex("testsoek"),
+        index: algolia.initIndex("test_index"),
       }
     },
 
