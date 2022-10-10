@@ -6,15 +6,16 @@ const client = algoliasearch(
 );
 
 const index = client.initIndex("Sanity-Algolia");
-const articlesJSON = require("./articles.json");
+// const articlesJSON = require("./articles.json");
 
-index.saveObjects(articlesJSON.result, {
-  autoGenerateObjectIDIfNotExist: true
-}).then(({ objectIDs }) => {
-  console.log(objectIDs);
-});
+// index.saveObjects(articlesJSON.result, {
+//   autoGenerateObjectIDIfNotExist: true
+// }).then(({ objectIDs }) => {
+//   console.log(objectIDs);
+// });
 
 const handler = event => {
+  console.log({ event });
   return JSON.stringify(event);
 }
 
