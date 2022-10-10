@@ -1,4 +1,6 @@
 const algoliasearch = require("algoliasearch");
+const sanityClient = require("@sanity/client");
+const indexer = require("sanity-algolia");
 
 const client = algoliasearch(
   'C26QC41PWH',
