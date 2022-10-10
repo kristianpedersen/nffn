@@ -18,7 +18,7 @@ const sanityClientInstance = sanityClient({
 const handler = async (event) => {
   const sanityAlgolia = indexer.default(
     {
-      standardArticle: {
+      post: {
         index: algolia.initIndex("test_index"),
         projection: `{
           title,
