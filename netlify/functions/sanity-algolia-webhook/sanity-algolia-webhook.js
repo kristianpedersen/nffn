@@ -61,7 +61,7 @@ const convertSanityDocumentToAlgoliaRecord = document => {
 }
 
 const handler = event => {
-  const sanityAlgolia = indexer(mapDocumentTypeToSearchIndex, convertSanityDocumentToAlgoliaRecord);
+  const sanityAlgolia = indexer.default(mapDocumentTypeToSearchIndex, convertSanityDocumentToAlgoliaRecord);
 
   return sanityAlgolia
     .webhookSync(sanityClientInstance, event.body)
