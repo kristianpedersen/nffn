@@ -41,7 +41,7 @@ const handler = (req, res) => {
   // const test = await sanityAlgolia.webhookSync(sanityClientInstance, event.body);
 
   return sanityAlgolia
-    .webhookSync(sanity, req.body)
+    .webhookSync(sanityClientInstance, req.body)
     .then(() => res.status(200).send('ok'));
 }
 
