@@ -2,7 +2,6 @@
 const algoliasearch = require("algoliasearch");
 const sanityClient = require("@sanity/client");
 const indexer = require("sanity-algolia");
-const { flattenBlocks } = indexer;
 
 const algolia = algoliasearch(
   'C26QC41PWH',
@@ -17,7 +16,7 @@ const sanityClientInstance = sanityClient({
 });
 
 const handler = (req, res) => {
-  const sanityAlgolia = indexer(
+  const sanityAlgolia = indexer.default(
     {
       post: {
         index: algolia.initIndex('posts'),
@@ -30,7 +29,6 @@ const handler = (req, res) => {
             title: document.title,
             path: document.slug.current,
             publishedAt: document.publishedAt,
-            excerpt: flattenBlocks(document.excerpt),
           };
         default:
           throw new Error(`Unknown type: ${document.type}`);
