@@ -28,7 +28,7 @@ const handler = (req, res) => {
           return {
             title: document.title,
             path: document.slug.current,
-            publishedAt: document.publishedAt,
+            publishedAt: document.created || (new Date()).toString(),
           };
         default:
           throw new Error(`Unknown type: ${document.type}`);
