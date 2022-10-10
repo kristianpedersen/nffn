@@ -13,3 +13,7 @@ index.saveObjects(articlesJSON, {
 }).then(({ objectIDs }) => {
   console.log(objectIDs);
 });
+
+const handler = event => {
+  return JSON.stringify(event);
+}
