@@ -2,6 +2,7 @@
 const algoliasearch = require("algoliasearch");
 const sanityClient = require("@sanity/client");
 const indexer = require("sanity-algolia");
+const { flattenBlocks } = indexer;
 
 const algolia = algoliasearch(
   'C26QC41PWH',
@@ -15,31 +16,33 @@ const sanityClientInstance = sanityClient({
   useCdn: false,
 });
 
-const handler = async (event) => {
-  const sanityAlgolia = indexer.default(
+const handler = (req, res) => {
+  const sanityAlgolia = indexer(
     {
       post: {
-        index: algolia.initIndex("test_index"),
-        projection: `{
-          title,
-          "path": slug.current,
-          "body": pt::text(body)
-        }
-        `
-      }
+        index: algolia.initIndex('posts'),
+      },
     },
-
     document => {
-      return document;
+      switch (document._type) {
+        case 'post':
+          return {
+            title: document.title,
+            path: document.slug.current,
+            publishedAt: document.publishedAt,
+            excerpt: flattenBlocks(document.excerpt),
+          };
+        default:
+          throw new Error(`Unknown type: ${document.type}`);
+      }
     }
   );
 
   // const test = await sanityAlgolia.webhookSync(sanityClientInstance, event.body);
 
-  return {
-    statusCode: 200,
-    body: `Alt gikk bra!`
-  };
+  return sanityAlgolia
+    .webhookSync(sanity, req.body)
+    .then(() => res.status(200).send('ok'));
 }
 
 module.exports = { handler }
