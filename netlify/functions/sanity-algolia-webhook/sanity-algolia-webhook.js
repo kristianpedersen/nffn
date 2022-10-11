@@ -14,6 +14,7 @@ const index = client.initIndex("Sanity-Algolia");
 const handler = async event => {
   try {
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
+    console.log("sup?")
 
     const savedObjects = await index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true });
     console.log({ savedObjects });
