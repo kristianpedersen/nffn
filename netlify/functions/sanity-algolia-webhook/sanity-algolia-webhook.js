@@ -30,13 +30,12 @@ const handler = async event => {
 
     // index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
     //   .then(bla => console.log(bla))
-    // console.log({ savedObjects });
 
     // const deletedObjects = index.deleteObjects(deleted);
     // console.log({ deletedObjects });
 
-    // const updatedObjects = index.partialUpdateObjects(updated, { createIfNotExists: false });
-    // console.log({ updatedObjects });
+    const updatedObjects = index.partialUpdateObjects(updated, { createIfNotExists: false });
+    console.log({ updatedObjects });
 
     return {
       statusCode: 200,
