@@ -25,17 +25,18 @@ client.getLogs({
 const handler = async event => {
   try {
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
-    console.log("sup?")
 
-    index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
-      .then(bla => console.log(bla))
-    console.log({ savedObjects });
+    console.log({ created, deleted, updated })
 
-    const deletedObjects = index.deleteObjects(deleted);
-    console.log({ deletedObjects });
+    // index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
+    //   .then(bla => console.log(bla))
+    // console.log({ savedObjects });
 
-    const updatedObjects = index.partialUpdateObjects(updated, { createIfNotExists: false });
-    console.log({ updatedObjects });
+    // const deletedObjects = index.deleteObjects(deleted);
+    // console.log({ deletedObjects });
+
+    // const updatedObjects = index.partialUpdateObjects(updated, { createIfNotExists: false });
+    // console.log({ updatedObjects });
 
     return {
       statusCode: 200,
