@@ -29,7 +29,6 @@ const handler = async event => {
 
     index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
       .then(bla => console.log(bla))
-      .catch(error => console.error(error));
     console.log({ savedObjects });
 
     const deletedObjects = index.deleteObjects(deleted);
