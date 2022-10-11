@@ -16,8 +16,13 @@ const handler = async event => {
     const { created, deleted, updated } = event.body; // These contain either [null] or [Algolia record ID(s)]
 
     const savedObjects = await index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true });
+    console.log({ savedObjects });
+
     const deletedObjects = await index.deleteObjects(deleted);
+    console.log({ deletedObjects });
+
     const updatedObjects = await index.partialUpdateObjects(updated, { createIfNotExists: false });
+    console.log({ updatedObjects });
 
     return {
       statusCode: 200,
