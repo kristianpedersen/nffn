@@ -13,12 +13,11 @@ const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
   try {
+    console.log({ event })
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
 
-    console.log({ created, deleted, updated })
-
-    // index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
-    //   .then(bla => console.log(bla))
+    index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
+      .then(bla => console.log(bla))
 
     // const deletedObjects = index.deleteObjects(deleted);
     // console.log({ deletedObjects });
