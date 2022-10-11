@@ -11,7 +11,7 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 
 const index = client.initIndex("Sanity-Algolia");
 
-exports.handler = async event => {
+const handler = async event => {
   try {
     const { created, deleted, updated } = event.body; // These contain either [null] or [Algolia record ID(s)]
 
@@ -29,19 +29,6 @@ exports.handler = async event => {
       body: JSON.stringify({ error }),
     };
   }
-
-
-  // 2. Sjekk om "create/update/delete" er angitt i request body
-  // 3. Sjekk om ID-ene allerede finnes i Algolia-indeksen
 };
 
-function search({ queryString, requestOptions }) {
-  index.search(queryString, requestOptions)
-    .then(({ hits }) => {
-      console.log(hits);
-    });
-}
-
-function updateIndex() {
-  console.log("")
-}
+module.exports = { handler }
