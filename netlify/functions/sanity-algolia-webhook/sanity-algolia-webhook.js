@@ -11,6 +11,17 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 
 const index = client.initIndex("Sanity-Algolia");
 
+
+
+client.getLogs({
+  offset: 100, // where to start from, default to 0
+  length: 100, // how many lines you want, default to 10
+  type: 'error' // which logs you want, default to no value (all)
+}).then(({ logs }) => {
+  console.log(logs);
+});
+
+
 const handler = async event => {
   try {
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
