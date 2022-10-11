@@ -16,7 +16,10 @@ const handler = async event => {
     console.log({ event })
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
 
-    index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
+    // index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
+    //   .then(bla => console.log(bla))
+
+    index.saveObjects(updated, { autoGenerateObjectIDIfNotExist: true })
       .then(bla => console.log(bla))
 
     // const deletedObjects = index.deleteObjects(deleted);
