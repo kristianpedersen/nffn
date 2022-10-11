@@ -15,6 +15,7 @@ exports.handler = async (event, context) => {
   // 1. Logg ut event og context
 
   try {
+    console.log({ event, context });
     return {
       statusCode: 200,
       body: JSON.stringify({ ...event, ...context })
