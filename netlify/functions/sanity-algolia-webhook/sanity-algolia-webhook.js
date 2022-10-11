@@ -1,76 +1,29 @@
-const algoliasearch = require("algoliasearch");
-const sanityClient = require("@sanity/client");
-const indexer = require("sanity-algolia");
+const AlgoliaProjectID = 'C26QC41PWH';
+const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 
-const client = algoliasearch(
-  'C26QC41PWH',
-  "e23b64dadd4c26f8678c15a2593521fa"
-);
+import { createNullLogger, LogLevelEnum } from '@algolia/logger-common';
+import { createConsoleLogger } from '@algolia/logger-console';
+import algoliasearch from 'algoliasearch';
 
-const sanityClientInstance = sanityClient({
-  projectId: 'sukats6f',
-  dataset: 'test',
-  apiVersion: '2022-09-25',
-  useCdn: false,
+const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
+  logger: createConsoleLogger(LogLevelEnum.Debug)
 });
 
 const index = client.initIndex("Sanity-Algolia");
-// const articlesJSON = require("./articles.json");
 
-// index.saveObjects(articlesJSON.result, {
-//   autoGenerateObjectIDIfNotExist: true
-// }).then(({ objectIDs }) => {
-//   console.log(objectIDs);
-// });
-
-const mapDocumentTypeToSearchIndex = {
-  post: {
-    index,
-    projection: `{
-          title,
-          "path": slug.current,
-          "body": pt::text(body)
-        }`,
-  },
-
-  article: {
-    index,
-    projection: `{
-          heading,
-          "body": pt::text(body),
-          "authorNames": authors[]->name
-        }`,
-  },
+const handler = (event) => {
+  // 1. Hent PortableText-objektet fra webhook-request (event.body)
+  // 2. Sjekk om "create/update/delete" er angitt i request body
+  // 3. Sjekk om ID-ene allerede finnes i Algolia-indeksen
 };
 
-const convertSanityDocumentToAlgoliaRecord = document => {
-  switch (document._type) {
-    case 'post':
-      return Object.assign({}, document, {
-        custom: 'An additional custom field for posts, perhaps?',
-      })
-    case 'article':
-      return {
-        title: document.heading,
-        body: document.body,
-        authorNames: document.authorNames,
-      }
-    default:
-      return document
-  }
+function search({ queryString, requestOptions }) {
+  index.search(queryString, requestOptions)
+    .then(({ hits }) => {
+      console.log(hits);
+    });
 }
 
-const handler = event => {
-  const sanityAlgolia = indexer.default(mapDocumentTypeToSearchIndex, convertSanityDocumentToAlgoliaRecord);
-
-  return sanityAlgolia
-    .webhookSync(sanityClientInstance, event.body)
-    .then(() => {
-      return {
-        statusCode: 200,
-        body: `Alt gikk bra!`
-      };
-    })
+function updateIndex() {
+  console.log("")
 }
-
-module.exports = { handler }
