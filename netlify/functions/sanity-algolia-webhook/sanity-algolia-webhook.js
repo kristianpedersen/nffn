@@ -11,14 +11,17 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 
 const index = client.initIndex("Sanity-Algolia");
 
-exports.handler = async (event, context) => {
-  // 1. Logg ut event og context
-
+exports.handler = async event => {
   try {
-    console.log({ event, context });
+    const { created, deleted, updated } = event.body; // These contain either [null] or [Algolia record ID(s)]
+
+    const savedObjects = await index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true });
+    const deletedObjects = await index.deleteObjects(deleted);
+    const updatedObjects = await index.partialUpdateObjects(updated, { createIfNotExists: false });
+
     return {
       statusCode: 200,
-      body: JSON.stringify({ ...event, ...context })
+      body: `Action: ${{ created, deleted, updated }}`
     };
   } catch (error) {
     return {
