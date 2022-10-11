@@ -14,7 +14,7 @@ const index = client.initIndex("Sanity-Algolia");
 const handler = async event => {
   console.log({ event });
   try {
-    const { created, deleted, updated } = event.body; // These contain either [null] or [Algolia record ID(s)]
+    const { created, deleted, updated } = event.body.ids; // These contain either [null] or [Algolia record ID(s)]
 
     const savedObjects = await index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true });
     console.log({ savedObjects });
