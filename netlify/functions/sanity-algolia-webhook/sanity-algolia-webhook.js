@@ -6,7 +6,7 @@ import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
-const PROD = false;
+const PROD = true;
 
 console.log(process.version);
 
