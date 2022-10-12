@@ -16,8 +16,6 @@ export const handler = async event => {
     const sanityProjectID = "sukats6f";
     const index = client.initIndex("Sanity-Algolia");
 
-    console.log({ nodeversjon: process.version });
-
     // These contain either [null] or an array of Sanity document IDs:
     const { created, deleted, updated, all } = PROD
       ? JSON.parse(event.body).ids
@@ -30,11 +28,11 @@ export const handler = async event => {
 
     // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
-    console.log({ sanityURL });
 
     const document = await fetch(sanityURL);
     const data = await document.json();
 
+    console.log({ data })
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
 
