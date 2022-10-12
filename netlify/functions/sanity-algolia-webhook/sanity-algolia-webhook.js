@@ -6,7 +6,7 @@ import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
-// import fetch from 'node-fetch';
+const PROD = true;
 
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
@@ -17,7 +17,14 @@ const index = client.initIndex("Sanity-Algolia");
 export const handler = async event => {
   try {
     // These contain either [null] or an array of Sanity document IDs:
-    const { created, deleted, updated, all } = JSON.parse(event.body).ids;
+    const { created, deleted, updated, all } = PROD
+      ? JSON.parse(event.body).ids
+      : {
+        created: [null],
+        deleted: [null],
+        updated: ["43cec318-21ad-4e49-a6a9-75a8fa1f4ad6"],
+        all: ["43cec318-21ad-4e49-a6a9-75a8fa1f4ad6"]
+      };
 
     // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
@@ -45,3 +52,7 @@ export const handler = async event => {
     };
   }
 };
+
+PROD
+  ? console.log("Hei fra prod!")
+  : handler()
