@@ -25,6 +25,8 @@ const handler = async event => {
       return `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
     });
 
+    console.log({ sanityDocumentURLs })
+
     const fetchSanityDocuments = async () => {
       try {
         return await Promise.all(
