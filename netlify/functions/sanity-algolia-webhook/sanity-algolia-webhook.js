@@ -1,7 +1,7 @@
 const AlgoliaProjectID = 'C26QC41PWH';
 const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 
-import { createNullLogger, LogLevelEnum } from '@algolia/logger-common';
+import { LogLevelEnum } from '@algolia/logger-common';
 import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 
@@ -12,22 +12,19 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
-  const indices = await client.listIndices();
-  console.log(JSON.stringify(indices));
   try {
-    const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
-    console.log({ updated })
-    // Få tak i liste med indekser fra Algolia
+    console.log({ event });
+    // const {
+    //   created,
+    //   deleted,
+    //   updated
+    // } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
 
-
-    // index.saveObjects(updated || [], { autoGenerateObjectIDIfNotExist: true })
-    //   .then(bla => console.log(bla))
+    // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
+    // console.log({createdOrUpdated});
 
     // const deletedObjects = index.deleteObjects(deleted || []);
     // console.log({ deletedObjects });
-
-    // const updatedObjects = await index.partialUpdateObjects(updated, { createIfNotExists: false });
-    // console.log({ updatedObjects });
 
     return {
       statusCode: 200,
