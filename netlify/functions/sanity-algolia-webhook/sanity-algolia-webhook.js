@@ -8,7 +8,7 @@ import algoliasearch from 'algoliasearch';
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
 });
-
+const sanityProjectID = "sukats6f";
 const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
@@ -28,20 +28,20 @@ const handler = async event => {
 
     console.log({ sanityDocumentURLs })
 
-    const fetchSanityDocuments = async () => {
-      try {
-        return await Promise.all(
-          sanityDocumentURLs.map(url => fetch(url).then(res => res.json()))
-        );
-      } catch (error) {
-        console.error({ error });
-      }
-    }
+    // const fetchSanityDocuments = async () => {
+    //   try {
+    //     return await Promise.all(
+    //       sanityDocumentURLs.map(url => fetch(url).then(res => res.json()))
+    //     );
+    //   } catch (error) {
+    //     console.error({ error });
+    //   }
+    // }
 
     // Fetch Sanity documents by ID
-    const sanityDocuments = fetchSanityDocuments();
+    // const sanityDocuments = fetchSanityDocuments();
 
-    console.log({ sanityDocuments })
+    // console.log({ sanityDocuments })
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
