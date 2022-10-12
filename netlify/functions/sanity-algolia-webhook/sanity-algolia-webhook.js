@@ -6,7 +6,9 @@ import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
-const PROD = true;
+const PROD = false;
+
+console.log(process.version);
 
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
