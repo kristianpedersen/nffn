@@ -4,6 +4,7 @@ const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 const { LogLevelEnum } = require('@algolia/logger-common');
 const { createConsoleLogger } = require('@algolia/logger-console');
 const algoliasearch = require('algoliasearch');
+const fetch = require("node-fetch");
 
 // import fetch from 'node-fetch';
 
