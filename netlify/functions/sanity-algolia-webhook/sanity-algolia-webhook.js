@@ -3,7 +3,7 @@ import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
-const PROD = false;
+const PROD = true;
 
 export const handler = async event => {
   try {
@@ -32,9 +32,8 @@ export const handler = async event => {
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
     console.log({ sanityURL });
 
-    // const document = await fetch(sanityURL);
-    // const data = await document.json();
-    // console.log({ data: JSON.stringify(data) });
+    const document = await fetch(sanityURL);
+    const data = await document.json();
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
@@ -44,7 +43,7 @@ export const handler = async event => {
 
     return {
       statusCode: 200,
-      body: `Action: ${{ created, deleted, updated }}`
+      body: JSON.stringify(data)
     };
   } catch (error) {
     console.error(error);
