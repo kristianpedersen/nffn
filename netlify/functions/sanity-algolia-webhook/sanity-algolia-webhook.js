@@ -19,21 +19,15 @@ const handler = async event => {
       deleted,
       updated,
       all
-    } = JSON.parse(event.body).ids; // These contain either [null] or Sanity document IDs
-    const allSanityDocumentIDs = all;
+    } = JSON.parse(event.body).ids; // These contain either [null] or an array of Sanity document IDs
 
-    const sanityURLs = all.map(documentID => {
-      return `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
-    });
-    console.log({ sanityURLs });
+    const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
+    console.log({ sanityURL });
 
-    const documents = await Promise.all(
-      sanityURLs.map(url => {
-        return fetch(url)
-          .then(res => res.json())
-      })
-    );
-    console.log({ documents });
+    const document = await fetch(sanityURL);
+    const json = await document.json();
+
+    console.log({ json });
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
