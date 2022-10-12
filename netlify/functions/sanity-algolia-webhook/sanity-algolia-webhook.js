@@ -38,15 +38,18 @@ export const handler = async event => {
     const data = response.result[0].content;
     console.log(JSON.stringify(data))
 
-    const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
-    console.log({ createdOrUpdated });
-
-    // const deletedObjects = index.deleteObjects(deleted || []);
-    // console.log({ deletedObjects });
+    let obj = "";
+    if (created || updated) {
+      obj = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
+      console.log({ obj });
+    } else if (deleted) {
+      obj = index.deleteObjects(deleted || []);
+      console.log({ obj });
+    }
 
     return {
       statusCode: 200,
-      body: JSON.stringify(response.result[0])
+      body: JSON.stringify(obj)
     };
   } catch (error) {
     console.error(error);
