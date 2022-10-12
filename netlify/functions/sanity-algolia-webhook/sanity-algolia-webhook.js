@@ -35,15 +35,15 @@ export const handler = async event => {
 
     const document = await fetch(sanityURL);
     const response = await document.json();
-    const data = response.result[0].content;
+    const data = response.result[0].content[0];
     console.log(JSON.stringify(data))
 
     let obj = "";
     if (created || updated) {
-      obj = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
+      obj = await index.saveObjects(data, { autoGenerateObjectIDIfNotExist: true });
       console.log({ obj });
     } else if (deleted) {
-      obj = index.deleteObjects(deleted || []);
+      obj = index.deleteObjects(data);
       console.log({ obj });
     }
 
