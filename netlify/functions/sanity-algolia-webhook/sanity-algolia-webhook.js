@@ -22,11 +22,15 @@ const handler = async event => {
       all
     } = JSON.parse(event.body).ids; // These contain either [null] or an array of Sanity document IDs
 
-    const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${all[0]}]{content}`;
+    const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
     console.log({ sanityURL });
 
-    // const document = await fetch(sanityURL);
-    // const json = await document.json();
+    const document = await fetch(sanityURL);
+    const json = await document.json();
+    console.log({ json });
+
+    const action = [created, deleted, updated].find(ID => Boolean(ID));
+    console.log({ action });
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
