@@ -12,21 +12,22 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
+  const indices = await client.listIndices();
+  console.log({ indices });
   try {
-    console.log({ event })
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
+    console.log({ updated })
+    // Få tak i liste med indekser fra Algolia
 
-    // index.saveObjects(created, { autoGenerateObjectIDIfNotExist: true })
+
+    // index.saveObjects(updated || [], { autoGenerateObjectIDIfNotExist: true })
     //   .then(bla => console.log(bla))
 
-    index.saveObjects(updated, { autoGenerateObjectIDIfNotExist: true })
-      .then(bla => console.log(bla))
-
-    // const deletedObjects = index.deleteObjects(deleted);
+    // const deletedObjects = index.deleteObjects(deleted || []);
     // console.log({ deletedObjects });
 
-    const updatedObjects = await index.partialUpdateObjects(updated, { createIfNotExists: false });
-    console.log({ updatedObjects });
+    // const updatedObjects = await index.partialUpdateObjects(updated, { createIfNotExists: false });
+    // console.log({ updatedObjects });
 
     return {
       statusCode: 200,
