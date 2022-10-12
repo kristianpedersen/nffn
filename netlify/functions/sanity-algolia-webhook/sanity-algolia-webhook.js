@@ -1,5 +1,3 @@
-console.log(process.version);
-console.log({ process });
 const AlgoliaProjectID = 'C26QC41PWH';
 const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 
@@ -10,7 +8,6 @@ import algoliasearch from 'algoliasearch';
 
 const PROD = true;
 
-
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
 });
@@ -19,6 +16,10 @@ const index = client.initIndex("Sanity-Algolia");
 
 export const handler = async event => {
   try {
+    console.log("Vises denne meldingen?")
+    console.log(process.version);
+    console.log({ process });
+
     // These contain either [null] or an array of Sanity document IDs:
     const { created, deleted, updated, all } = PROD
       ? JSON.parse(event.body).ids
