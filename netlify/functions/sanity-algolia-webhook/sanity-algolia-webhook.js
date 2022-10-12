@@ -26,6 +26,10 @@ export const handler = async event => {
         all: ["43cec318-21ad-4e49-a6a9-75a8fa1f4ad6"]
       };
 
+    const action = Object.entries({ created, deleted, updated })
+      .filter(([action, [ID]]) => ID !== null)
+    console.log({ action })
+
     // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
 
