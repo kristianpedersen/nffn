@@ -30,8 +30,8 @@ export const handler = async event => {
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
 
     const document = await fetch(sanityURL);
-    const data = await document.json();
-
+    const response = await document.json();
+    const data = response.result[0];
     console.log({ data })
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
@@ -41,7 +41,7 @@ export const handler = async event => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      body: JSON.stringify(response.result[0])
     };
   } catch (error) {
     console.error(error);
