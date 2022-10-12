@@ -31,7 +31,7 @@ export const handler = async event => {
 
     const document = await fetch(sanityURL);
     const response = await document.json();
-    const data = response.result[0];
+    const data = response.result[0].content;
     console.log({ data })
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
