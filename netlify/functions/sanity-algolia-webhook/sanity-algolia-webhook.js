@@ -33,8 +33,9 @@ export const handler = async event => {
     const response = await document.json();
     const data = response.result[0].content;
     console.log(JSON.stringify(data))
-    // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
-    // console.log({createdOrUpdated});
+
+    const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
+    console.log({ createdOrUpdated });
 
     // const deletedObjects = index.deleteObjects(deleted || []);
     // console.log({ deletedObjects });
