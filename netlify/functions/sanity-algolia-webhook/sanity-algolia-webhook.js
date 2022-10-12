@@ -6,7 +6,7 @@ const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 import { LogLevelEnum } from '@algolia/logger-common';
 import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 
 const PROD = true;
 
@@ -33,9 +33,9 @@ export const handler = async event => {
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
     console.log({ sanityURL });
 
-    const document = await fetch(sanityURL);
-    const data = await document.json();
-    console.log({ data: JSON.stringify(data) });
+    // const document = await fetch(sanityURL);
+    // const data = await document.json();
+    // console.log({ data: JSON.stringify(data) });
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
