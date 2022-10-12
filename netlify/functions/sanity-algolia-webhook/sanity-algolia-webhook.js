@@ -19,29 +19,20 @@ const handler = async event => {
       updated,
       all
     } = JSON.parse(event.body).ids; // These contain either [null] or Sanity document IDs
+    const allSanityDocumentIDs = all;
 
-    console.log({ updated, all })
-
-    const sanityDocumentURLs = all.map(documentID => {
+    const sanityURLs = all.map(documentID => {
       return `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
     });
+    console.log({ sanityURLs });
 
-    console.log({ sanityDocumentURLs })
-
-    // const fetchSanityDocuments = async () => {
-    //   try {
-    //     return await Promise.all(
-    //       sanityDocumentURLs.map(url => fetch(url).then(res => res.json()))
-    //     );
-    //   } catch (error) {
-    //     console.error({ error });
-    //   }
-    // }
-
-    // Fetch Sanity documents by ID
-    // const sanityDocuments = fetchSanityDocuments();
-
-    // console.log({ sanityDocuments })
+    const documents = await Promise.all(
+      sanityURLs.map(url => {
+        return fetch(url)
+          .then(res => res.json())
+      })
+    );
+    console.log({ documents });
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
@@ -54,6 +45,7 @@ const handler = async event => {
       body: `Action: ${{ created, deleted, updated }}`
     };
   } catch (error) {
+    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error }),
