@@ -13,7 +13,7 @@ const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
   const indices = await client.listIndices();
-  console.log({ indices });
+  console.log(JSON.stringify(indices));
   try {
     const { created, deleted, updated } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
     console.log({ updated })
