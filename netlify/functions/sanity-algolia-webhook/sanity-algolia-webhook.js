@@ -13,13 +13,14 @@ const index = client.initIndex("Sanity-Algolia");
 
 const handler = async event => {
   try {
-    console.log({ event });
     const {
       created,
       deleted,
       updated,
       all
     } = JSON.parse(event.body).ids; // These contain either [null] or Sanity document IDs
+
+    console.log({ updated, all })
 
     const sanityDocumentURLs = all.map(documentID => {
       return `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
