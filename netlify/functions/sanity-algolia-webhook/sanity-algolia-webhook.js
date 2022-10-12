@@ -4,6 +4,7 @@ const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 import { LogLevelEnum } from '@algolia/logger-common';
 import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
+import fetch from 'node-fetch';
 
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
