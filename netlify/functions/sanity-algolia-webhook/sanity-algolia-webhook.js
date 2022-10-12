@@ -32,9 +32,9 @@ export const handler = async event => {
     const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
     console.log({ sanityURL });
 
-    const document = await fetch(sanityURL);
-    const data = await document.json();
-    console.log({ data: JSON.stringify(data) });
+    // const document = await fetch(sanityURL);
+    // const data = await document.json();
+    // console.log({ data: JSON.stringify(data) });
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
