@@ -1,10 +1,10 @@
 const AlgoliaProjectID = 'C26QC41PWH';
 const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 
-const { LogLevelEnum } = require('@algolia/logger-common');
-const { createConsoleLogger } = require('@algolia/logger-console');
-const algoliasearch = require('algoliasearch');
-const fetch = require("node-fetch");
+import { LogLevelEnum } from '@algolia/logger-common';
+import { createConsoleLogger } from '@algolia/logger-console';
+import algoliasearch from 'algoliasearch';
+import fetch from "node-fetch";
 
 // import fetch from 'node-fetch';
 
@@ -14,7 +14,7 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 const sanityProjectID = "sukats6f";
 const index = client.initIndex("Sanity-Algolia");
 
-const handler = async event => {
+export const handler = async event => {
   try {
     const {
       created,
@@ -51,5 +51,3 @@ const handler = async event => {
     };
   }
 };
-
-module.exports = { handler }
