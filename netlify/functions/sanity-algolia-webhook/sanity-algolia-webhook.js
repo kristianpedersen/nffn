@@ -1,3 +1,5 @@
+console.log(process.version);
+console.log({ process });
 const AlgoliaProjectID = 'C26QC41PWH';
 const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
 
@@ -8,7 +10,6 @@ import fetch from "node-fetch";
 
 const PROD = true;
 
-console.log(process.version);
 
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
   logger: createConsoleLogger(LogLevelEnum.Debug)
