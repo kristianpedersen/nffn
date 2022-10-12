@@ -14,11 +14,31 @@ const index = client.initIndex("Sanity-Algolia");
 const handler = async event => {
   try {
     console.log({ event });
-    // const {
-    //   created,
-    //   deleted,
-    //   updated
-    // } = JSON.parse(event.body).ids; // These contain either [null] or [Algolia record ID(s)]
+    const {
+      created,
+      deleted,
+      updated,
+      all
+    } = JSON.parse(event.body).ids; // These contain either [null] or Sanity document IDs
+
+    const sanityDocumentURLs = all.map(documentID => {
+      return `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id==${documentID}]{content}`;
+    });
+
+    const fetchSanityDocuments = async () => {
+      try {
+        return await Promise.all(
+          sanityDocumentURLs.map(url => fetch(url).then(res => res.json()))
+        );
+      } catch (error) {
+        console.error({ error });
+      }
+    }
+
+    // Fetch Sanity documents by ID
+    const sanityDocuments = fetchSanityDocuments();
+
+    console.log({ sanityDocuments })
 
     // const createdOrUpdated = await index.saveObjects(updated || created || [], { autoGenerateObjectIDIfNotExist: true });
     // console.log({createdOrUpdated});
