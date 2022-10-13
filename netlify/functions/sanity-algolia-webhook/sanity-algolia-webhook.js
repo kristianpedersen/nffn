@@ -20,31 +20,20 @@ export const handler = async event => {
       deleted,
       updated,
       all
-    } = JSON.parse(event.body).ids;
-
-    // For example:
-    /* {
-          created: [null],
-          deleted: [sanityDocumentID(s)],
-          updated: [null],
-          all: [sanityDocumentID(s)]
-        }
-    */
+    } = JSON.parse(event.body).ids; // All four items contain either [null] or [sanityDocumentID]
 
     // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
     // Since these are arrays, they could probably contain several IDs in certain cases, but when?
     const sanityDocumentID = all[0];
 
-    console.log(all[0], created[0], updated[0], deleted[0], { event })
+    console.log({ event: JSON.stringify(event) })
 
     let obj = "";
 
-    if (created[0] || updated[0]) {
+    if (updated[0]) {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const document = await fetch(sanityURL);
       const response = await document.json();
-
-      console.log({ response });
 
       const fetchedDataFromSanity = response.result[0].content[0];
 
