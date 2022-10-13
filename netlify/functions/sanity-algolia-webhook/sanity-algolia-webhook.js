@@ -25,9 +25,9 @@ export const handler = async event => {
     // For example:
     /* {
           created: [null],
-          deleted: [sanityDocumentID],
+          deleted: [sanityDocumentID(s)],
           updated: [null],
-          all: [sanityDocumentID]
+          all: [sanityDocumentID(s)]
         }
     */
 
@@ -37,18 +37,20 @@ export const handler = async event => {
 
     let obj = "";
 
-    if (created || updated) {
+    if (created[0] || updated[0]) {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const document = await fetch(sanityURL);
       const response = await document.json();
+
       console.log({ response });
+
       const fetchedDataFromSanity = response.result[0].content[0];
 
       obj = await index.saveObject(
         { ...fetchedDataFromSanity, objectID: sanityDocumentID },
         { autoGenerateObjectIDIfNotExist: true }
       );
-    } else if (deleted) {
+    } else if (deleted[0]) {
       obj = index.deleteObject(sanityDocumentID);
       console.log({ deleted: true, obj });
     }
