@@ -3,55 +3,42 @@ import { createConsoleLogger } from '@algolia/logger-console';
 import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
+const AlgoliaProjectID = 'C26QC41PWH';
+const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa"; // TODO: Legg et annet sted :)
+const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
+  logger: createConsoleLogger(LogLevelEnum.Debug)
+});
+
+const sanityProjectID = "sukats6f";
+const index = client.initIndex("Sanity-Algolia");
+
 export const handler = async event => {
-  console.log({ event });
-  const AlgoliaProjectID = 'C26QC41PWH';
-  const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
-  const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
-    logger: createConsoleLogger(LogLevelEnum.Debug)
-  });
-
-  const sanityProjectID = "sukats6f";
-  const index = client.initIndex("Sanity-Algolia");
-
   try {
-    const {
-      created,
-      deleted,
-      updated,
-      all
-    } = JSON.parse(event.body).ids; // All four items contain either [null] or [sanityDocumentID]
+    const { created, deleted, updated, all } = JSON.parse(event.body).ids; // All four items contain either [null] or [sanityDocumentID]
 
-    // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
-    // Since these are arrays, they could probably contain several IDs in certain cases, but when?
+    // all[0] should always contain a SanityDocumentID associated with create/update/delete.
+    // Do these arrays ever contain more than one item?
     const sanityDocumentID = all[0];
 
-    console.log({ event: JSON.stringify(event) })
-
-    let obj = "";
-
-    if (updated[0] || created[0]) {
+    if (deleted[0]) {
+      await index.deleteObject(sanityDocumentID);
+    } else if (updated[0] || created[0]) {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
-      const document = await fetch(sanityURL);
-      const response = await document.json();
+      const response = await fetch(sanityURL);
+      const data = await response.json();
+      const fetchedDataFromSanity = data?.result[0]?.content[0];
 
-      const fetchedDataFromSanity = response.result[0].content[0];
-
-      obj = await index.saveObject(
-        { ...fetchedDataFromSanity, objectID: sanityDocumentID },
-        { autoGenerateObjectIDIfNotExist: true }
-      );
-    } else if (deleted[0]) {
-      obj = await index.deleteObject(sanityDocumentID);
-      console.log({ deleted: true, obj });
+      await index.saveObject({
+        ...fetchedDataFromSanity,
+        objectID: sanityDocumentID
+      });
     }
 
     return {
       statusCode: 200,
-      body: JSON.stringify(obj)
+      body: JSON.stringify(event)
     };
   } catch (error) {
-    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error }),
