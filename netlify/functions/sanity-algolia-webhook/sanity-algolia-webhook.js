@@ -30,7 +30,7 @@ export const handler = async event => {
 
     let obj = "";
 
-    if (updated[0]) {
+    if (updated[0] || created[0]) {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const document = await fetch(sanityURL);
       const response = await document.json();
