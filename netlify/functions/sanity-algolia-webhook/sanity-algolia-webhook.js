@@ -4,6 +4,7 @@ import algoliasearch from 'algoliasearch';
 import fetch from "node-fetch";
 
 export const handler = async event => {
+  console.log({ event });
   const AlgoliaProjectID = 'C26QC41PWH';
   const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa";
   const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
@@ -17,9 +18,9 @@ export const handler = async event => {
     // For example:
     /* {
           created: [null],
-          deleted: [sanityDocID],
+          deleted: [sanityDocumentID],
           updated: [null],
-          all: [sanityDocID]
+          all: [sanityDocumentID]
         }
     */
     const {
@@ -29,22 +30,22 @@ export const handler = async event => {
       all
     } = JSON.parse(event.body).ids;
 
-    console.log({ created, deleted, updated, all });
+    // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
+    const sanityDocumentID = all[0];
 
     let obj = "";
 
     if (created || updated) {
-      // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
-      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${all[0]}"]{content}`;
+      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const document = await fetch(sanityURL);
       const response = await document.json();
       console.log({ response });
+
       const fetchedDataFromSanity = response.result[0].content[0];
-
-      console.log({ data: JSON.stringify(fetchedDataFromSanity) });
-      obj = await index.saveObject(fetchedDataFromSanity, { autoGenerateObjectIDIfNotExist: true });
-      console.log({ saved: true, obj });
-
+      obj = await index.saveObject(
+        { ...fetchedDataFromSanity, objectID: sanityDocumentID },
+        { autoGenerateObjectIDIfNotExist: true }
+      );
     } else if (deleted) {
       obj = index.deleteObject(data);
       console.log({ deleted: true, obj });
