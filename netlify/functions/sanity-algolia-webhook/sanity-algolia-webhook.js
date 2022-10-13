@@ -53,7 +53,7 @@ export const handler = async event => {
         { autoGenerateObjectIDIfNotExist: true }
       );
     } else if (deleted[0]) {
-      obj = index.deleteObject(sanityDocumentID);
+      obj = await index.deleteObject(sanityDocumentID);
       console.log({ deleted: true, obj });
     }
 
