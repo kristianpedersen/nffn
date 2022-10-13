@@ -15,6 +15,13 @@ export const handler = async event => {
   const index = client.initIndex("Sanity-Algolia");
 
   try {
+    const {
+      created,
+      deleted,
+      updated,
+      all
+    } = JSON.parse(event.body).ids;
+
     // For example:
     /* {
           created: [null],
@@ -23,14 +30,9 @@ export const handler = async event => {
           all: [sanityDocumentID]
         }
     */
-    const {
-      created,
-      deleted,
-      updated,
-      all
-    } = JSON.parse(event.body).ids;
 
     // If the webhook was triggered, we can (probably?) assume that all[0] contains a valid Sanity document ID.
+    // Since these are arrays, they could probably contain several IDs in certain cases, but when?
     const sanityDocumentID = all[0];
 
     let obj = "";
@@ -40,14 +42,14 @@ export const handler = async event => {
       const document = await fetch(sanityURL);
       const response = await document.json();
       console.log({ response });
-
       const fetchedDataFromSanity = response.result[0].content[0];
+
       obj = await index.saveObject(
         { ...fetchedDataFromSanity, objectID: sanityDocumentID },
         { autoGenerateObjectIDIfNotExist: true }
       );
     } else if (deleted) {
-      obj = index.deleteObject(data);
+      obj = index.deleteObject(sanityDocumentID);
       console.log({ deleted: true, obj });
     }
 
