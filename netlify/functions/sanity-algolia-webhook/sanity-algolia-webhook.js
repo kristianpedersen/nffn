@@ -14,8 +14,20 @@ export const handler = async event => {
   const index = client.initIndex("Sanity-Algolia");
 
   try {
-    // These contain either [null] or an array of Sanity document IDs:
-    const { created, deleted, updated, all } = JSON.parse(event.body).ids;
+    // For example:
+    /* {
+          created: [null],
+          deleted: [sanityDocID],
+          updated: [null],
+          all: [sanityDocID]
+        }
+    */
+    const {
+      created,
+      deleted,
+      updated,
+      all
+    } = JSON.parse(event.body).ids;
 
     console.log({ created, deleted, updated, all });
 
@@ -30,11 +42,11 @@ export const handler = async event => {
       const fetchedDataFromSanity = response.result[0].content[0];
 
       console.log({ data: JSON.stringify(fetchedDataFromSanity) });
-      obj = await index.saveObjects(fetchedDataFromSanity, { autoGenerateObjectIDIfNotExist: true });
+      obj = await index.saveObject(fetchedDataFromSanity, { autoGenerateObjectIDIfNotExist: true });
       console.log({ saved: true, obj });
 
     } else if (deleted) {
-      obj = index.deleteObjects(data);
+      obj = index.deleteObject(data);
       console.log({ deleted: true, obj });
     }
 
