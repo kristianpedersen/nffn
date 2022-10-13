@@ -17,6 +17,8 @@ export const handler = async event => {
     // These contain either [null] or an array of Sanity document IDs:
     const { created, deleted, updated, all } = JSON.parse(event.body).ids;
 
+    console.log({ created, deleted, updated, all });
+
     let obj = "";
 
     if (created || updated) {
