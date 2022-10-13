@@ -35,6 +35,8 @@ export const handler = async event => {
     // Since these are arrays, they could probably contain several IDs in certain cases, but when?
     const sanityDocumentID = all[0];
 
+    console.log(all[0], created[0], updated[0], deleted[0], { event })
+
     let obj = "";
 
     if (created[0] || updated[0]) {
