@@ -30,7 +30,7 @@ export const handler = async (event) => {
       const data = await response.json();
       const fetchedDataFromSanity = data?.result[0]?.content;
 
-      console.log({ data: JSON.stringify(fetchedDataFromSanity) });
+      console.log({ data: JSON.stringify(data?.result[0]) });
 
       // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
       function toPlainText(blocks = []) {
@@ -54,11 +54,14 @@ export const handler = async (event) => {
 
       const text = toPlainText(fetchedDataFromSanity);
 
-      console.log({ text: JSON.stringify(text) });
+      console.log({
+        headline: "",
+        text: JSON.stringify(text),
+      });
 
       await index.saveObject({
-        text,
-        objectID: sanityDocumentID,
+        fetchedDataFromSanity,
+        objectID: sanityDocumentID, // Overskriving
       });
     }
 
