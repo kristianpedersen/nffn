@@ -28,7 +28,7 @@ export const handler = async (event) => {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const response = await fetch(sanityURL);
       const data = await response.json();
-      const fetchedDataFromSanity = data?.result[0]?.content[0];
+      const fetchedDataFromSanity = data?.result[0]?.content;
 
       console.log({ data: JSON.stringify(fetchedDataFromSanity) });
 
