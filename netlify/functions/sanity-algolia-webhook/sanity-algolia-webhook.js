@@ -52,7 +52,7 @@ export const handler = async (event) => {
 
       const text = toPlainText(fetchedDataFromSanity);
 
-      console.log(text);
+      console.log({ text });
 
       await index.saveObject({
         text,
