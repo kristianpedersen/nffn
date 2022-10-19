@@ -48,8 +48,10 @@ export const handler = async (event) => {
         );
       }
 
+      const text = toPlainText(fetchedDataFromSanity);
+
       await index.saveObject({
-        text: toPlainText(fetchedDataFromSanity),
+        text,
         objectID: sanityDocumentID,
       });
     }
