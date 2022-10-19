@@ -28,6 +28,8 @@ export const handler = async (event) => {
       const data = await response.json();
       const fetchedDataFromSanity = data?.result[0]?.content[0];
 
+      console.log(fetchedDataFromSanity);
+
       // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
       function toPlainText(blocks = []) {
         return (
