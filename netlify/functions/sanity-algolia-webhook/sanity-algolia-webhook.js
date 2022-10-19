@@ -28,9 +28,9 @@ export const handler = async (event) => {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const response = await fetch(sanityURL);
       const data = await response.json();
-      const fetchedDataFromSanity = data?.result;
+      const fetchedDataFromSanity = data?.result[0]?.content[0];
 
-      console.log({ data: JSON.stringify(data) });
+      console.log({ data: JSON.stringify(fetchedDataFromSanity) });
 
       // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
       function toPlainText(blocks = []) {
