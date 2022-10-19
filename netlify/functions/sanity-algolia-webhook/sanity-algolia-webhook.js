@@ -20,6 +20,8 @@ export const handler = async (event) => {
     // Do these arrays ever contain more than one item?
     const sanityDocumentID = all[0];
 
+    console.log({ created, deleted, updated, all });
+
     if (deleted[0]) {
       await index.deleteObject(sanityDocumentID);
     } else if (updated[0] || created[0]) {
@@ -28,7 +30,7 @@ export const handler = async (event) => {
       const data = await response.json();
       const fetchedDataFromSanity = data?.result;
 
-      console.log({ data });
+      console.log({ data: JSON.stringify(data) });
 
       // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
       function toPlainText(blocks = []) {
@@ -52,7 +54,7 @@ export const handler = async (event) => {
 
       const text = toPlainText(fetchedDataFromSanity);
 
-      console.log({ text });
+      console.log({ text: JSON.stringify(text) });
 
       await index.saveObject({
         text,
