@@ -1,18 +1,18 @@
-import { LogLevelEnum } from '@algolia/logger-common';
-import { createConsoleLogger } from '@algolia/logger-console';
-import algoliasearch from 'algoliasearch';
+import { LogLevelEnum } from "@algolia/logger-common";
+import { createConsoleLogger } from "@algolia/logger-console";
+import algoliasearch from "algoliasearch";
 import fetch from "node-fetch";
 
-const AlgoliaProjectID = 'C26QC41PWH';
+const AlgoliaProjectID = "C26QC41PWH";
 const AlgoliaApiKey = "e23b64dadd4c26f8678c15a2593521fa"; // TODO: Legg et annet sted :)
 const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
-  logger: createConsoleLogger(LogLevelEnum.Debug)
+  logger: createConsoleLogger(LogLevelEnum.Debug),
 });
 
 const sanityProjectID = "sukats6f";
 const index = client.initIndex("Sanity-Algolia");
 
-export const handler = async event => {
+export const handler = async (event) => {
   try {
     const { created, deleted, updated, all } = JSON.parse(event.body).ids; // All four items contain either [null] or [sanityDocumentID]
 
@@ -28,15 +28,35 @@ export const handler = async event => {
       const data = await response.json();
       const fetchedDataFromSanity = data?.result[0]?.content[0];
 
+      // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
+      function toPlainText(blocks = []) {
+        return (
+          blocks
+            // loop through each block
+            .map((block) => {
+              // if it's not a text block with children,
+              // return nothing
+              if (block._type !== "block" || !block.children) {
+                return "";
+              }
+              // loop through the children spans, and join the
+              // text strings
+              return block.children.map((child) => child.text).join("");
+            })
+            // join the paragraphs leaving split by two linebreaks
+            .join("\n\n")
+        );
+      }
+
       await index.saveObject({
-        ...fetchedDataFromSanity,
-        objectID: sanityDocumentID
+        text: toPlainText(fetchedDataFromSanity),
+        objectID: sanityDocumentID,
       });
     }
 
     return {
       statusCode: 200,
-      body: JSON.stringify(event)
+      body: JSON.stringify(event),
     };
   } catch (error) {
     return {
