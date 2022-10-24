@@ -54,8 +54,9 @@ export const handler = async (event) => {
       const content = toPlainText(fetchedDataFromSanity.content);
 
       await index.saveObject({
-        fetchedDataFromSanity,
-        objectID: sanityDocumentID, // Overskriving
+        headline,
+        content,
+        objectID: sanityDocumentID,
       });
     }
 
