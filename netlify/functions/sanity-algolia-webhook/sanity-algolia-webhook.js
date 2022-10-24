@@ -30,12 +30,14 @@ export const handler = async (event) => {
       const response = await fetch(sanityURL);
       const data = await response.json();
       console.log({ data: JSON.stringify(data) }); // Hent tittel-feltet, og husk å endre til "overskrift" når den tiden kommer
-      const contentFromSanityAPI = data?.result[0]?.content;
+      const dataFromSanity = data?.result[0];
+      let { content, title } = dataFromSanity;
 
-      const content = portableTextToPlainText(contentFromSanityAPI);
+      content = portableTextToPlainText(content);
 
       await index.saveObject({
         content,
+        title,
         objectID: sanityDocumentID,
       });
     }
