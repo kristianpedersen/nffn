@@ -10,7 +10,7 @@ const client = algoliasearch(AlgoliaProjectID, AlgoliaApiKey, {
 });
 
 const sanityProjectID = "sukats6f";
-const index = client.initIndex("Sanity-Algolia");
+const index = client.initIndex("searchResults");
 
 export const handler = async (event) => {
   try {
@@ -28,9 +28,7 @@ export const handler = async (event) => {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const response = await fetch(sanityURL);
       const data = await response.json();
-      const fetchedDataFromSanity = data?.result[0]?.content;
-
-      console.log({ data: JSON.stringify(data?.result[0]) });
+      const fetchedDataFromSanity = data?.result[0];
 
       // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
       function toPlainText(blocks = []) {
@@ -52,12 +50,8 @@ export const handler = async (event) => {
         );
       }
 
-      const text = toPlainText(fetchedDataFromSanity);
-
-      console.log({
-        headline: "",
-        text: JSON.stringify(text),
-      });
+      const headline = fetchedDataFromSanity;
+      const content = toPlainText(fetchedDataFromSanity.content);
 
       await index.saveObject({
         fetchedDataFromSanity,
