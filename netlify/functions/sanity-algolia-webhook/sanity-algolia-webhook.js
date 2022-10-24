@@ -1,5 +1,7 @@
 import { LogLevelEnum } from "@algolia/logger-common";
 import { createConsoleLogger } from "@algolia/logger-console";
+import { portableTextToPlainText } from "./portableTextToPlainText";
+
 import algoliasearch from "algoliasearch";
 import fetch from "node-fetch";
 
@@ -14,13 +16,12 @@ const index = client.initIndex("searchResults");
 
 export const handler = async (event) => {
   try {
-    const { created, deleted, updated, all } = JSON.parse(event.body).ids; // All four items contain either [null] or [sanityDocumentID]
+    // All four items contain either [null] or [sanityDocumentID]
+    const { created, deleted, updated, all } = JSON.parse(event.body).ids;
 
     // all[0] should always contain a SanityDocumentID associated with create/update/delete.
     // Do these arrays ever contain more than one item?
     const sanityDocumentID = all[0];
-
-    console.log({ created, deleted, updated, all });
 
     if (deleted[0]) {
       await index.deleteObject(sanityDocumentID);
@@ -28,38 +29,11 @@ export const handler = async (event) => {
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
       const response = await fetch(sanityURL);
       const data = await response.json();
-      const fetchedDataFromSanity = data?.result[0];
+      const contentFromSanityAPI = data?.result[0]?.content;
 
-      // https://www.sanity.io/docs/presenting-block-text#ac67a867dd69
-      function toPlainText(blocks = []) {
-        return (
-          blocks
-            // loop through each block
-            .map((block) => {
-              // if it's not a text block with children,
-              // return nothing
-              if (block._type !== "block" || !block.children) {
-                return "";
-              }
-              // loop through the children spans, and join the
-              // text strings
-              return block.children.map((child) => child.text).join("");
-            })
-            // join the paragraphs leaving split by two linebreaks
-            .join("\n\n")
-        );
-      }
-
-      const headline = fetchedDataFromSanity;
-      const content = toPlainText(fetchedDataFromSanity.content);
-
-      console.log({
-        headline,
-        content,
-      });
+      const content = portableTextToPlainText(contentFromSanityAPI);
 
       await index.saveObject({
-        headline,
         content,
         objectID: sanityDocumentID,
       });
