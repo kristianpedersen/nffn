@@ -26,13 +26,11 @@ export const handler = async (event) => {
     if (deleted[0]) {
       await index.deleteObject(sanityDocumentID);
     } else if (updated[0] || created[0]) {
-      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content}`;
+      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content, title}`;
       const response = await fetch(sanityURL);
-      const data = await response.json();
-      console.log({ data: JSON.stringify(data) }); // Hent tittel-feltet, og husk å endre til "overskrift" når den tiden kommer
-      const dataFromSanity = data?.result[0];
-      let { content, title } = dataFromSanity;
+      const json = await response.json();
 
+      let { content, title } = json?.result[0];
       content = portableTextToPlainText(content);
 
       await index.saveObject({
