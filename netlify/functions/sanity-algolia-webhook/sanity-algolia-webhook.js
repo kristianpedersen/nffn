@@ -26,15 +26,21 @@ export const handler = async (event) => {
     if (deleted[0]) {
       await index.deleteObject(sanityDocumentID);
     } else if (updated[0] || created[0]) {
-      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]{content, title, slug}`;
+      const projection = `{
+        content,
+        slug,
+        title,
+      }`;
+      const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]${projection}`;
       const response = await fetch(sanityURL);
       const json = await response.json();
 
-      let { content, title } = json?.result[0];
+      let { content, slug, title } = json?.result[0];
       content = portableTextToPlainText(content);
 
       await index.saveObject({
         content,
+        slug,
         title,
         objectID: sanityDocumentID,
       });
