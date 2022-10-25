@@ -40,7 +40,7 @@ export const handler = async (event) => {
 
       await index.saveObject({
         content,
-        slug,
+        slug: slug.current,
         title,
         objectID: sanityDocumentID,
       });
