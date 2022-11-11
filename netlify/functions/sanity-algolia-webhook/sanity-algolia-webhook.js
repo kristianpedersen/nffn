@@ -19,6 +19,7 @@ export const handler = async (event) => {
     // All four items contain either [null] or [sanityDocumentID]
     console.log("Object.keys(event.body)");
     console.log(Object.keys(JSON.parse(event.body)));
+    console.log(JSON.parse(event.body));
     const { created, deleted, updated, all } = JSON.parse(event.body).ids;
 
     // all[0] should always contain a SanityDocumentID associated with create/update/delete.
