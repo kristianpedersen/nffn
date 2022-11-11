@@ -17,6 +17,8 @@ const index = client.initIndex("searchResults");
 export const handler = async (event) => {
   try {
     // All four items contain either [null] or [sanityDocumentID]
+    console.log("event:");
+    console.log(event);
     const { created, deleted, updated, all } = JSON.parse(event.body).ids;
 
     // all[0] should always contain a SanityDocumentID associated with create/update/delete.
@@ -28,20 +30,20 @@ export const handler = async (event) => {
     } else if (updated[0] || created[0]) {
       const projection = `{
         content,
-        slug,
         title,
+        slug,
       }`;
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]${projection}`;
       const response = await fetch(sanityURL);
       const json = await response.json();
 
-      let { content, slug, title } = json?.result[0];
+      let { content, title } = json?.result[0];
       content = portableTextToPlainText(content);
 
       await index.saveObject({
         content,
-        slug: slug.current,
         title,
+        slug,
         objectID: sanityDocumentID,
       });
     }
