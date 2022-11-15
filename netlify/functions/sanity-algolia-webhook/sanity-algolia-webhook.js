@@ -29,10 +29,24 @@ export const handler = async (event) => {
     if (deleted[0]) {
       await index.deleteObject(sanityDocumentID);
     } else if (updated[0] || created[0]) {
+      // https://www.sanity.io/organizations/o5p1E5nlg/project/sukats6f/api/webhooks/YpndWrWXiZr0qxDY
       const projection = `{
-        content,
+        "ids": {
+          "created": [
+            select(before() == null && after() != null => _id)
+          ],
+          "deleted": [
+            select(before() != null && after() == null => _id)
+          ],
+          "updated": [
+            select(before() != null && after() != null => _id)
+          ]
+        },
         title,
-        slug,
+        description,
+        content,
+        slug{current},
+        _type
       }`;
       const sanityURL = `https://${sanityProjectID}.api.sanity.io/v2021-06-07/data/query/test?query=*[_id=="${sanityDocumentID}"]${projection}`;
       const response = await fetch(sanityURL);
